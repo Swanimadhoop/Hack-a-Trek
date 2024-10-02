@@ -1,0 +1,132 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: "Atma", system-ui;
+}
+
+
+
+.navigation-posted {
+  display: flex;
+  justify-content: space-between;
+  left: -20px;
+  position: relative;
+  top: 10px;
+  left: 130px;
+  align-items: center;
+  gap: 20px;
+  width: 75%; /* Ensure the items are spread out horizontally */
+  padding: 10px 20px;
+}
+
+.navigation-posted a {
+  text-decoration: none;
+  color: #65558f; /* Link color */
+  font-weight: bold; /* Make links bold */
+  position: relative;
+  top: 20px;
+}
+
+.navigation-posted a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Yellow bar */
+.yellow {
+  background-color: #f6e11f;
+  height: 64px;
+  position: absolute;
+  top: -5px;
+  width: 1360px;
+}
+
+/* Account circle */
+.account-circle-posted {
+  position: absolute;
+  top: 30px;
+  right: 875px;
+  height: 41px !important;
+  width: 41px !important;
+  z-index: inherit;
+}
+
+/* Hack-a-Trek styles */
+.hack-a-trek-posted {
+  position: relative;
+  text-align: center; /* Center text */
+  margin-top: 10px; /* Spacing above */
+  top: -20px;
+}
+
+.purple-posted{
+  position: relative;
+  color: #6F42C1;
+  font-size: 26px;
+  bottom: -10px;
+}
+
+.text-wrapper{
+
+  font-family: Atma,system-ui;
+  font-size: large;
+  position: relative;
+  bottom: -10px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Nunny image */
+.nunny {
+  display: block; /* Center image block */
+  margin: 20px auto; /* Center horizontally and add spacing */
+}
+
+/* Centering the success message */
+.thank-you-for {
+  text-align: center; /* Center the text */
+  font-size: 1.5rem; /* Font size for the success message */
+  margin-top: 20px; /* Spacing above */
+}
+
+/* Overall wrapper */
+.THANKYOU-PAGE {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center contents */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+}
+
+/* Logout button */
+.log-out-button-posted {
+  background-color: #65558f !important; /* Set the button color to violet */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add some padding */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  margin-left: 20px; /* Move it slightly to the left */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  position: relative;
+  right: -420px;
+  bottom: 10px;
+}
+
+.view-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #65558f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 2; /* Ensure it appears on top */
+  position: relative;
+  bottom: -20px; /* Adjust positioning if needed */
+}
+
+.view-button:hover {
+  background-color: #6f42c1;
+}
