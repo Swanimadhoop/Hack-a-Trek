@@ -1,6 +1,6 @@
 import React from "react";
 import "./ThankyouPage.css";
-import Nunny from 'C:\\Users\\swani\\OneDrive\\Desktop\\hackathon\\hackathon-website\\src\\assets\\v823-nunny-16b.jpg';
+import Nunny from '../../../src/assets/v823-nunny-16b.jpg';
 
 
 export const ThankyouPage = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import "./HackathonPosted.css";
 import Button  from "@mui/material/Button";
 import { MdAccountCircle } from "react-icons/md";
-import Nunny from 'C:\\Users\\swani\\OneDrive\\Desktop\\hackathon\\hackathon-website\\src\\assets\\v823-nunny-16b.jpg';
+import Nunny from '../../../src/assets/v823-nunny-16b.jpg';
 
 
 export const HackathonPosted = () => {
