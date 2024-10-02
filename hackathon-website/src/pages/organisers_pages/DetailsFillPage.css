@@ -1,0 +1,161 @@
+.hackathon-details {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.yellow-up {
+  background-color: #f6e11f;
+  height: 64px;
+  position: absolute;
+  top: -5px;
+  width: 1360px;
+}
+
+.log-out-button {
+  background-color: #65558f !important; /* Set the button color to violet */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add some padding */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  margin-left: 20px; /* Move it slightly to the left */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  position: relative;
+  left: -30px;
+  bottom: -10px;
+}
+
+.log-out-button:hover {
+  background-color: #6f42c1; /* Darker violet on hover */
+}
+
+
+.home-and-logout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 529px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  left: -20px;
+  position: relative;
+  top: 10px;
+  left: 60px;
+  align-items: center;
+  width: 50%; /* Ensure the items are spread out horizontally */
+  padding: 10px 20px;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  left: -20px;
+  position: relative;
+  top: 10px;
+  left: 60px;
+  align-items: center;
+  width: 50%; /* Ensure the items are spread out horizontally */
+  padding: 10px 20px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  left: -20px;
+  position: relative;
+  top: 10px;
+  left: 130px;
+  align-items: center;
+  width: 45%; /* Ensure the items are spread out horizontally */
+  padding: 10px 20px;
+}
+
+.navigation a {
+  color: #65558f; /* Change link color to violet */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.navigation a:hover {
+  color: #6f42c1; /* Darker violet on hover */
+}
+
+.title {
+  font-family: var(--single-line-body-base-font-family);
+  font-size: var(--single-line-body-base-font-size);
+  font-weight: var(--single-line-body-base-font-weight);
+  color: var(--color-text-default-default);
+  white-space: nowrap;
+}
+
+
+
+.account-circle {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  height: 41px !important;
+  width: 41px !important;
+}
+
+.hack-a-trek-details {
+  position: absolute;
+  top: 12px;
+  left: 540px;
+  font-family: "Atma-Bold", Helvetica;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.hack-a-trek-details .span {
+  color: #000000db;
+}
+
+.hack-a-trek-details .text-wrapper-2 {
+  color: #65558f;
+}
+
+/* Form Section */
+.form-section {
+  position: relative;
+  margin-left: -700pt;
+  top: 90px;
+  
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 200%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #65558f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background-color: #6f42c1;
+}
