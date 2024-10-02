@@ -1,0 +1,95 @@
+.organiser-profile { background-color: #ffffff; display: flex; flex-direction: row; justify-content: center; width: 100%; } 
+.organiser-profile .div-2 { background-color: #ffffff; height: 1950px; overflow: hidden; position: relative; width: 1280px; } 
+.organiser-profile .overlap { height: 153px; left: -28px; position: absolute; top: -77px; width: 1361px; } 
+.organiser-profile .yellow { height: 146px; left: 0; position: absolute; top: 0; width: 1361px; } 
+.organiser-profile .overlap-group { height: 146px; position: relative; } 
+.organiser-profile .yellow-up { background-color: #f6e11f; height: 64px; left: 21px; position: absolute; top: 73px; width: 1307px; } 
+.organiser-profile .wallpaper-bg { height: 146px; left: 0; mix-blend-mode: color-burn; position: absolute; top: 0; width: 1361px; } 
+.organiser-profile .home-and-logout { height: 83px; left: 718px; position: absolute; top: 61px; width: 537px; } 
+.organiser-profile .overlap-2 { height: 83px; position: relative; } 
+.organiser-profile .home-abt-supp { align-items: center; border: 0px none; border-color: var(--color-border-default-default); box-shadow: 0px 4px 4px #00000040; display: flex; flex-wrap: wrap; gap: var(--size-space-600); height: 83px; justify-content: center; left: 0; mix-blend-mode: darken; padding: var(--size-space-800); position: absolute; top: 0; width: 505px; } 
+.organiser-profile .navigation-pill-list { align-items: center; display: flex; flex: 1; flex-grow: 1; flex-wrap: wrap; gap: var(--size-space-150); justify-content: flex-end; margin-bottom: -6.5px; margin-top: -6.5px; position: relative; } 
+.organiser-profile .navigation-pill-2 { border-radius: var(--size-radius-200); flex: 0 0 auto; gap: var(--size-space-200); position: relative; } 
+.organiser-profile .navigation-pill-instance { flex: 0 0 auto !important; } 
+.organiser-profile .design-component-instance-node { margin-right: -1px !important; } 
+.organiser-profile .log-out { align-items: center; background-color: var(--color-background-neutral-tertiary); border: 0.93px solid; border-color: var(--color-border-neutral-secondary); border-radius: 7.42px; display: flex; gap: var(--size-space-200); height: 23px; justify-content: center; left: 473px; overflow: hidden; padding: var(--size-space-200); position: absolute; top: 30px; width: 64px; } 
+.organiser-profile .logout { color: var(--color-text-default-default); font-family: var(--single-line-body-base-font-family); font-size: var(--single-line-body-base-font-size); font-style: var(--single-line-body-base-font-style); font-weight: var(--single-line-body-base-font-weight); letter-spacing: var(--single-line-body-base-letter-spacing); line-height: var(--single-line-body-base-line-height); margin-bottom: -2.97px; margin-left: -3px; margin-right: -3px; margin-top: -4.83px; position: relative; white-space: nowrap; width: fit-content; } 
+.organiser-profile .hack-a-trek { color: transparent; font-family: "Atma-Bold", Helvetica; font-size: 26px; font-weight: 700; left: 568px; letter-spacing: 0; line-height: 27.6px; position: absolute; top: 91px; width: 192px; } 
+.organiser-profile .span { color: #000000db; } 
+.organiser-profile .text-wrapper-2 { color: #65558f; } 
+.organiser-profile .overlap-3 { height: 1296px; left: -1103px; position: absolute; top: 758px; width: 2583px; } 
+.organiser-profile .yellow-2 { background-size: 100% 100%; height: 326px; left: 0; position: absolute; top: 970px; width: 2583px; } 
+.organiser-profile .yellow-3 { background-size: 100% 100%; height: 326px; left: 0; position: absolute; top: 267px; width: 2583px; } 
+.organiser-profile .frame { align-items: flex-start; display: flex; flex-direction: column; gap: 11.65px; height: 1192px; left: 965px; padding: 11.65px; position: absolute; top: 0; width: 1545px; } 
+.organiser-profile .yellow-up-2 { align-self: stretch; background-color: #f6e11f; height: 1180.35px; margin-bottom: -11.65px; position: relative; width: 100%; } 
+.organiser-profile .applied-hackathons { color: transparent; font-family: "Black Han Sans-Regular", Helvetica; font-size: 52.9px; font-weight: 400; height: 296px; left: 989px; letter-spacing: 0; line-height: 74px; position: absolute; text-align: center; top: 868px; width: 668px; } 
+.organiser-profile .text-wrapper-3 { color: #000000; } 
+.organiser-profile .RUNNING-hackathons { color: transparent; font-family: "Black Han Sans-Regular", Helvetica; font-size: 52.9px; font-weight: 400; height: 296px; left: 989px; letter-spacing: 0; line-height: 74px; position: absolute; text-align: center; top: 165px; width: 668px; } 
+.organiser-profile .YOUR-PROJECTS { color: transparent; font-family: "Black Han Sans-Regular", Helvetica; font-size: 57.6px; font-weight: 400; height: 324px; left: 966px; letter-spacing: 0; line-height: 80.6px; position: absolute; text-align: center; top: 497px; width: 711px; } 
+.organiser-profile .rectangle { background-color: #d9d9d9; border-radius: 20px; height: 230px; left: 1557px; position: absolute; top: 822px; width: 372px; } 
+.organiser-profile .rectangle-2 { background-color: #d9d9d9; border-radius: 20px; height: 230px; left: 1557px; position: absolute; top: 119px; width: 372px; } 
+.organiser-profile .rectangle-3 { background-color: #d9d9d9; border-radius: 20px; height: 230px; left: 1557px; position: absolute; top: 467px; width: 372px; } 
+.organiser-profile .rectangle-4 { background-color: #d9d9d9; border-radius: 20px; height: 230px; left: 1970px; position: absolute; top: 822px; width: 372px; } 
+.organiser-profile .rectangle-5 { background-color: #d9d9d9; border-radius: 20px; height: 230px; left: 1970px; position: absolute; top: 119px; width: 372px; } 
+.organiser-profile .rectangle-6 { background-color: #d9d9d9; border-radius: 20px; height: 230px; left: 1970px; position: absolute; top: 467px; width: 372px; } 
+.organiser-profile .rectangle-7 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 1572px; position: absolute; top: 835px; width: 341px; } 
+.organiser-profile .rectangle-8 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 1572px; position: absolute; top: 132px; width: 341px; } 
+.organiser-profile .rectangle-9 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 1572px; position: absolute; top: 480px; width: 341px; } 
+.organiser-profile .rectangle-10 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 1985px; position: absolute; top: 835px; width: 341px; } 
+.organiser-profile .rectangle-11 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 1985px; position: absolute; top: 132px; width: 341px; } 
+.organiser-profile .rectangle-12 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 1985px; position: absolute; top: 480px; width: 341px; } 
+.organiser-profile .vector { height: 1px; left: 1135px; object-fit: cover; position: absolute; top: 48px; width: 1224px; } 
+.organiser-profile .img { height: 1px; left: 1146px; object-fit: cover; position: absolute; top: 392px; width: 1213px; } 
+.organiser-profile .vector-2 { height: 1px; left: 1152px; object-fit: cover; position: absolute; top: 774px; width: 1207px; } 
+.organiser-profile .button-instance { background-color: #ffffff !important; border-radius: 84.26px !important; display: flex !important; gap: 6.74px !important; height: 39px !important; left: 1281px !important; position: absolute !important; top: 684px !important; width: 99px !important; } 
+.organiser-profile .button-2 { gap: 6.74px !important; padding: 8.43px 20.22px !important; } 
+.organiser-profile .button-3 { color: #000000 !important; margin-top: unset !important; } 
+.organiser-profile .overlap-4 { height: 155px; left: 11px; position: absolute; top: 109px; width: 697px; } 
+.organiser-profile .account-circle { height: 41px !important; left: 0 !important; position: absolute !important; top: 26px !important; width: 41px !important; } 
+.organiser-profile .avatar-block-instance { left: 20px !important; position: absolute !important; top: 0 !important; width: 677px !important; } 
+.organiser-profile .avatar-block-2 { border-radius: 28349.28px !important; height: 132.17px !important; position: relative !important; width: 132.17px !important; } 
+.organiser-profile .avatar-block-3 { gap: 6.61px !important; } 
+.organiser-profile .avatar-block-4 { color: #f6e11f !important; margin-top: -3.3px !important; } 
+.organiser-profile .overlap-5 { height: 60px; left: 32px; position: absolute; top: 288px; width: 1152px; } 
+.organiser-profile .overlap-6 { height: 60px; left: 0; position: absolute; top: 0; width: 1152px; } 
+.organiser-profile .text { color: #000000; font-family: "Inter-Bold", Helvetica; font-size: 41.7px; font-weight: 700; left: 262px; letter-spacing: 0; line-height: 44.2px; position: absolute; top: 0; white-space: nowrap; } 
+.organiser-profile .vector-3 { height: 1px; left: 0; object-fit: cover; position: absolute; top: 0; width: 1152px; } 
+.organiser-profile .tag-instance { left: 242px !important; position: absolute !important; top: 28px !important; } 
+.organiser-profile .tag-2 { left: 4px !important; position: absolute !important; top: 28px !important; } 
+.organiser-profile .tag-3 { left: 118px !important; position: absolute !important; top: 28px !important; } 
+.organiser-profile .vector-4 { height: 1px; left: 31px; object-fit: cover; position: absolute; top: 374px; width: 1152px; } 
+.organiser-profile .overlap-7 { background-color: #d9d9d9; border-radius: 15px; height: 309px; left: 28px; position: absolute; top: 417px; width: 728px; } 
+.organiser-profile .group { height: 86px; left: 21px; position: absolute; top: 59px; width: 683px; } 
+.organiser-profile .group-2 { height: 86px; left: 21px; position: absolute; top: 187px; width: 693px; } 
+.organiser-profile .text-wrapper-4 { color: #00000091; font-family: var(--body-base-font-family); font-size: var(--body-base-font-size); font-style: var(--body-base-font-style); font-weight: var(--body-base-font-weight); height: 32px; left: 22px; letter-spacing: var(--body-base-letter-spacing); line-height: var(--body-base-line-height); position: absolute; top: 26px; width: 93px; }
+.avatar-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text-wrapper-2 {
+    font-family: 'Arial', sans-serif; /* Replace 'Arial' with any other bold font family if needed */
+    font-weight: bold;
+}
+
+.text-wrapper-2:first-child {
+    color: #F7E11F; /* Anna's color */
+    font-size: 24px;
+}
+
+.text-wrapper-2:last-child {
+    color: #65558F; /* Harvard University's color */
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.add-more-button {
+    background-color: #D9D9D9;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}

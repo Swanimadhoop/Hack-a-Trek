@@ -1,0 +1,136 @@
+/* Basic reset */
+/* General styles */
+body {
+    margin: 0;
+    font-family: "Atma", system-ui;
+  }
+  
+  
+  /* Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f6e11f;
+  }
+  
+  .navigation-start {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navigation-start a {
+    text-decoration: none;
+    color: #65558f; /* Link color */
+    font-weight: bold; /* Bold font */
+    position: relative;
+    left: 810px;
+  }
+
+  .navigation-start a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .log-out-button-start {
+    background-color: #65558f !important; /* Set violet background */
+    color: white !important; /* White text */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    border: none;
+    cursor: pointer;
+    position: relative;
+    left: 455px;
+    transition: background-color 0.3s;
+  }
+
+  .log-out-button-feedback:hover {
+    background-color: #4b3e6f; /* Darker shade on hover */
+  }
+  
+  .account-icon-start {
+    position: relative;
+    top: -3px;
+    right: 1189px;
+    font-size: 2.5rem; /* Increase icon size */
+    cursor: pointer;
+  }
+
+
+  
+  /* Main Content */
+  .main-content {
+    padding: 20px;
+  }
+  
+  /* Title Hack-a-Trek */
+  .hack-a-trek-start {
+    font-family: Atma,system-ui;
+    font-size: large;
+    position: relative;
+    left: 500px;
+    top: 20px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .purple-start {
+    color: #6F42C1;
+    top: -1.5px;
+    position: relative;
+  }
+  
+  .text-highlight {
+    color: #f39c12;
+  }
+  
+  /* Hackathon Info */
+  .hackathon-info {
+    display: flex;
+    margin-right: 800px;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .hackathon-name {
+    position: relative;
+    top: 25px;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  
+
+  
+  .details-box-start {
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  /* Participant List */
+  .participant-list-container {
+    margin-top: 40px;
+    margin-right: 800px;
+
+  }
+  
+  .participant-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .download-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #65558f;
+  }
+  
