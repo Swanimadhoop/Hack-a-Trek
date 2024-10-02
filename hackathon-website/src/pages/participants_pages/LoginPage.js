@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./LoginPage.css"; // Ensure correct path
-import whatsappImage from 'C:\\Users\\swani\\OneDrive\\Desktop\\hackathon\\hackathon-website\\src\\assets\\WhatsApp Image 2024-09-02 at 00.37.22_c865fbb6-Photoroom.png';
+import whatsappImage from '../../../src/assets/WhatsApp Image 2024-09-02 at 00.37.22_c865fbb6-Photoroom.png';
 
 const LandingPage = () => {
   const [showRegisterDropdown, setShowRegisterDropdown] = useState(false);
