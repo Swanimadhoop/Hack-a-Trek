@@ -72,9 +72,7 @@ export const ParticpantProfile = () => {
                     <div className="rectangle-10" /> 
                     <div className="rectangle-11" /> 
                     <div className="rectangle-12" /> 
-                    <img className="vector" alt="Vector" src="vector-19.svg" /> 
-                    <img className="img" alt="Vector" src="vector-20.svg" /> 
-                    <img className="vector-2" alt="Vector" src="vector-21.svg" /> 
+
                 </div> 
                 <div className="overlap-4"> 
                     <MdAccountCircle className="account-circle" /> 
@@ -85,8 +83,7 @@ export const ParticpantProfile = () => {
                 </div> 
                 <img className="vector-4" alt="Vector" src="vector-18.svg" /> 
                 <div className="overlap-7"> 
-                    <img className="group" alt="Group" src="group-49.png" /> 
-                    <img className="group-2" alt="Group" src="group-50.png" /> 
+
                     <div className="text-wrapper-4">About me</div> 
                 </div> 
             </div> 

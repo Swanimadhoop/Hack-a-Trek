@@ -12,6 +12,21 @@
     position: relative;
     width: 1260px;
   }
+
+
+  .link-submission {
+    text-decoration: none; /* Remove the default underline */
+    color: #000; /* Set the text color (default to black) */
+    display: block; /* Makes the whole area clickable */
+    padding: 8px 0; /* Add some vertical padding */
+    transition: color 0.3s; /* Smooth transition for color change */
+  }
+  
+  .link-submission:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #f6e11f; /* Change color on hover */
+  }
+
   
   .submission .overlap {
     height: 92px;
