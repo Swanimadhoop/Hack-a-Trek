@@ -2,11 +2,11 @@ import React from "react";
 import { IoIosAddCircle } from "react-icons/io";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { MdOutlineArrowCircleRight } from "react-icons/md";
-import Nunny from 'C:\\Users\\swani\\OneDrive\\Desktop\\hackathon\\hackathon-website\\src\\assets\\v823-nunny-16b.jpg';
-import laika from 'C:\\Users\\swani\\OneDrive\\Desktop\\hackathon\\hackathon-website\\src\\assets\\laika-rag-pipeline-featured.png';
-import earth from 'C:\\Users\\swani\\OneDrive\\Desktop\\hackathon\\hackathon-website\\src\\assets\\EARTH_DAY_2019_WEB_orig.width-1024.jpg';
-import dpu from 'C:\\Users\\swani\\OneDrive\\Desktop\\hackathon\\hackathon-website\\src\\assets\\DPU-Hackathon-featured.png';
-import nways from 'C:\\Users\\swani\\OneDrive\\Desktop\\hackathon\\hackathon-website\\src\\assets\\N-ways-to-GPU-Programming-Bootcamp.jpg';
+import Nunny from '../../../src/assets/v823-nunny-16b.jpg';
+import laika from '../../../src/assets/laika-rag-pipeline-featured.png';
+import earth from '../../../src/assets/EARTH_DAY_2019_WEB_orig.width-1024.jpg';
+import dpu from '../../../src/assets/DPU-Hackathon-featured.png';
+import nways from '../../../src/assets/N-ways-to-GPU-Programming-Bootcamp.jpg';
 
 
 import "./HomePage.css";

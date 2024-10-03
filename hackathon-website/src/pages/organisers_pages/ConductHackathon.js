@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
 import "./ConductHackathon.css";
-import yelloBg from "../../assets/yellow.svg.png";
+import yelloBg from "../../../src/assets/yellow.svg.png";
 import { MdAccountCircle } from "react-icons/md";
 
 const ConductHackathon = () => {
