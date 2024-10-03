@@ -61,6 +61,7 @@ export const OrgSignup = () => {
   // Handling login navigation
   const handleLogin = () => {
     navigate("/ologin");
+
   };
 
   return (
@@ -83,8 +84,10 @@ export const OrgSignup = () => {
       <div className="main-content">
         <div className="form-container">
           <p>
+
             Elevate your hackathon experience with effortless registration, streamlined submissions, and efficient judging. 
             Sign in or organize to begin.
+
           </p>
 
           {/* Dropdown for Organiser/Participant */}
@@ -94,6 +97,7 @@ export const OrgSignup = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
+
               <Dropdown.Item eventKey="Organiser">Organiser</Dropdown.Item>
               <Dropdown.Item eventKey="Participant">Participant</Dropdown.Item>
             </Dropdown.Menu>

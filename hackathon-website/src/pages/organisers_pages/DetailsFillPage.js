@@ -48,6 +48,7 @@ export const DetailsFillPage = () => {
         <label className="form-label"><label className="form-label"> <strong>{hackathonName}</strong></label> {/* Display the hackathon name */}
         </label>
 
+
         <div className="form-group">
           <label>Last Day to Apply:</label>
           <input

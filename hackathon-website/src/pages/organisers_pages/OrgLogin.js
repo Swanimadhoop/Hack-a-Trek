@@ -12,7 +12,6 @@ export const OrgLogin = () => {
   const [password, setPassword] = useState("");  // State for password input
   const [errorMessage, setErrorMessage] = useState(""); // State for error message
   const navigate = useNavigate();                // For page navigation
-
   const handleSelect = (eventKey) => {
     setRole(eventKey); // Set the selected role
   };
@@ -20,6 +19,7 @@ export const OrgLogin = () => {
   const handleRegister = () => {
     navigate("/osignup"); // Navigate to OrgSignup page
   };
+
 
   // Function to handle login form submission
   const handleLogin = async (e) => {
@@ -42,6 +42,7 @@ export const OrgLogin = () => {
       setErrorMessage(error.response.data.message || "Login failed!");
     }
   };
+
 
   return (
     <div className="org-login-container0">
@@ -78,6 +79,7 @@ export const OrgLogin = () => {
               <Dropdown.Item eventKey="Participant">Participant</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+
 
           {/* Display error message if login fails */}
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
