@@ -33,7 +33,7 @@ app.use(fileUpload({
 
 app.use("/api/v1/user",userRouter);
 app.use("/api/v1/application",applicationRouter);
-app.use("/api/v1/hack",hackRouter);
+app.use("/api/v1/hackathon",hackRouter);
 
 dbConnection();
 

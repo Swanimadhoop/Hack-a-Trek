@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
+import axios from "axios"; // Import axios for making HTTP requests
 import "./ConductHackathon.css";
 import yelloBg from "../../../src/assets/yellow.svg.png";
 import { MdAccountCircle } from "react-icons/md";
@@ -8,9 +9,48 @@ import { MdAccountCircle } from "react-icons/md";
 const ConductHackathon = () => {
   const navigate = useNavigate(); // Initialize useNavigate hook
 
+  // State to store form data
+  const [organisationName, setOrganisationName] = useState("");
+  const [organisationEmail, setOrganisationEmail] = useState("");
+  const [hackathonName, setHackathonName] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // To handle errors
+  const [successMessage, setSuccessMessage] = useState(""); // To handle success messages
+
   // Function to handle icon click and navigate to the profile page
   const handleIconClick = () => {
     navigate("/oprofile"); // Replace '/oprofile' with the correct path for your organizer profile page
+  };
+
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    try {
+      // Reset any previous messages
+      setErrorMessage("");
+      setSuccessMessage("");
+
+      // Make a POST request to the backend API
+      const response = await axios.post("http://localhost:4000/api/v1/hackathon/createhackathon", {
+        orgName: organisationName,
+        orgEmail: organisationEmail,
+        hackathonName: hackathonName,
+      });
+
+      // Handle success - clear form and show success message
+      setOrganisationName("");
+      setOrganisationEmail("");
+      setHackathonName("");
+      setSuccessMessage("Hackathon created successfully!");
+
+      // Navigate to the next page after a short delay to show success message
+      setTimeout(() => {
+        navigate("/detailsfill", { state: { hackathonName: hackathonName } }); // Replace '/success' with the path of the next page
+      }, 2000); // Delay for 2 seconds
+    } catch (error) {
+      // Handle error and show error message
+      setErrorMessage(error.response?.data?.message || "Failed to create hackathon. Please try again.");
+    }
   };
 
   return (
@@ -38,17 +78,45 @@ const ConductHackathon = () => {
 
         <div className="form-container">
           <div className="rectangle conduct-hackathon-form">
-            <label htmlFor="organisationName">Organisation Name</label>
-            <input type="text" id="organisationName" placeholder="Enter your organisation name" />
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="organisationName">Organisation Name</label>
+              <input 
+                type="text" 
+                id="organisationName" 
+                placeholder="Enter your organisation name" 
+                value={organisationName} 
+                onChange={(e) => setOrganisationName(e.target.value)} 
+                required
+              />
 
-            <label htmlFor="organisationEmail">Organisation Email</label>
-            <input type="email" id="organisationEmail" placeholder="Enter your organisation email" />
+              <label htmlFor="organisationEmail">Organisation Email</label>
+              <input 
+                type="email" 
+                id="organisationEmail" 
+                placeholder="Enter your organisation email" 
+                value={organisationEmail} 
+                onChange={(e) => setOrganisationEmail(e.target.value)} 
+                required
+              />
 
-            <label htmlFor="hackathonName">Hackathon Name</label>
-            <input type="text" id="hackathonName" placeholder="Enter your hackathon name" />
+              <label htmlFor="hackathonName">Hackathon Name</label>
+              <input 
+                type="text" 
+                id="hackathonName" 
+                placeholder="Enter your hackathon name" 
+                value={hackathonName} 
+                onChange={(e) => setHackathonName(e.target.value)} 
+                required
+              />
 
-            <button className="buttons">Conduct Hackathon</button>
+              <button className="buttons" type="submit">Conduct Hackathon</button>
+            </form>
+
+            {/* Display success or error messages */}
+            {successMessage && <p className="success-message">{successMessage}</p>}
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>
+
           <img alt="Yellow Background" src={yelloBg} className="yello-bg-image-conduct" />
         </div>
       </div>
