@@ -1,0 +1,147 @@
+.publish-results {
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.publish-results .yellow-up {
+    background-color: #f6e11f;
+    height: 64px;
+    position: relative;
+    top: 11px;
+    width: 100vw; /* Full viewport width */
+    left: 200px;
+    right: 0; /* Ensure it spans across both sides */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any padding */
+    box-sizing: border-box; /* Include padding/border in the element's total width */
+}
+
+.navigation-publish {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .navigation-publish a {
+    text-decoration: none;
+    color: #65558f; /* Link color */
+    font-weight: bold; /* Bold font */
+    position: relative;
+    left: 200px;
+  }
+  
+  .navigation-publish a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Log out button */
+  .log-out-button-publish {
+    background-color: #65558f !important; /* Set violet background */
+    color: white !important; /* White text */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    border: none;
+    cursor: pointer;
+    left: 220px;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  
+  .log-out-button-publish:hover {
+    background-color: #4b3e6f; /* Darker shade on hover */
+  }
+  
+  /* Account circle */
+  .account-circle-publish {
+    position: relative;
+    right: 1020px;
+    font-size: 2.5rem; /* Increase icon size */
+    cursor: pointer;
+  }
+  
+  /* Title Hack-a-Trek */
+  .hack-a-trek-publish {
+    font-family: Atma,system-ui;
+    font-size: large;
+    position: relative;
+    right: 550px;
+    top: 13px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .purple {
+    color: #6F42C1;
+    top: -1.5px;
+    position: relative;
+  }
+.results-inputs {
+    padding-top: 250px;  /* Example padding for the top */
+    border-radius: 10px;  /* Optional rounded corners */
+    box-sizing: border-box;
+    position: relative;
+    right: -20px;
+}
+
+
+.publish-results .title {
+    font-family: var(--single-line-body-base-font-family);
+    font-size: var(--single-line-body-base-font-size);
+    font-weight: var(--single-line-body-base-font-weight);
+    white-space: nowrap;
+    margin-top: -1px;
+    position: relative;
+}
+
+
+.publish-results .text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 105px;
+    left: 25px;
+    width: 557px;
+    gap: var(--size-space-200);
+}
+
+/* Input fields */
+.input-field {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Focus state for input fields */
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Publish button styling */
+.publish-button {
+    background-color: #65558f;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    left: 20px;
+}
+
+/* Hover effect for publish button */
+.publish-button:hover {
+    background-color: #4b3e6f;
+}
