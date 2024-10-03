@@ -13,6 +13,7 @@
     width: 1260px;
   }
 
+
   .link-submission {
     text-decoration: none; /* Remove the default underline */
     color: #000; /* Set the text color (default to black) */
@@ -25,6 +26,7 @@
     text-decoration: underline; /* Underline on hover */
     color: #f6e11f; /* Change color on hover */
   }
+
   
   .submission .overlap {
     height: 92px;

@@ -72,6 +72,7 @@ export const ParticpantProfile = () => {
                     <div className="rectangle-10" /> 
                     <div className="rectangle-11" /> 
                     <div className="rectangle-12" /> 
+
                 </div> 
                 <div className="overlap-4"> 
                     <MdAccountCircle className="account-circle" /> 
@@ -82,6 +83,7 @@ export const ParticpantProfile = () => {
                 </div> 
                 <img className="vector-4" alt="Vector" src="vector-18.svg" /> 
                 <div className="overlap-7"> 
+
                     <div className="text-wrapper-4">About me</div> 
                 </div> 
             </div> 

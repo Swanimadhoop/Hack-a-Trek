@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { MdAccountCircle } from "react-icons/md";
 import Button from '@mui/material/Button'; // Importing Material-UI Button
 import "./DetailsFillPage.css";
+import { useLocation } from "react-router-dom";
 
 export const DetailsFillPage = () => {
+  const location=useLocation();
+  const hackathonName=location.state?.hackathonName;
   const [formData, setFormData] = useState({
     lastDayToApply: "",
     dateOfEvent: "",
@@ -42,7 +45,9 @@ export const DetailsFillPage = () => {
       </p>
 
       <div className="form-section">
-        <label className="form-label">Hackathon Name -</label>
+        <label className="form-label"><label className="form-label"> <strong>{hackathonName}</strong></label> {/* Display the hackathon name */}
+        </label>
+
 
         <div className="form-group">
           <label>Last Day to Apply:</label>
