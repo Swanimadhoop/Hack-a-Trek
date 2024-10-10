@@ -25,9 +25,10 @@ import HackathonPosted from './pages/organisers_pages/HackathonPosted';
 import ViewHackathon from './pages/organisers_pages/ViewHackathon';
 import StartHackathon from './pages/organisers_pages/StartHackathon'
 import Feedback from './pages/organisers_pages/Feedback';
-
-import PublishResults from './pages/organisers_pages/PublishResults'
 import Submissions from './pages/organisers_pages/Submissions';
+import PublishResults from './pages/organisers_pages/PublishResults'
+import EndHackathon from './pages/organisers_pages/EndHackathon'
+import EndSubmission from './pages/organisers_pages/EndSubmission';
 import OrganiserProfile from './pages/organisers_pages/OrganiserProfile'
 
 
@@ -64,12 +65,12 @@ function App() {
         <Route path="/view" element={<ViewHackathon/>} />
         <Route path="/start" element={<StartHackathon/>} />
         <Route path="/feedback" element={<Feedback/>} />
-
         <Route path="/oprofile" element={<OrganiserProfile/>} />
+        <Route path="/submission" element={<Submissions/>} />
+        <Route path="/end" element={<EndHackathon/>} />
+        <Route path="/endsubmission" element={<EndSubmission/>} />
         <Route path="/publish" element={<PublishResults/>} />
 
-        
-        <Route path="/submission" element={<Submissions/>} />
 
 
 

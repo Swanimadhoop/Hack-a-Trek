@@ -12,12 +12,17 @@ export const LandingPage = () => {
 
     const handleSelect = (eventKey) => {
         setRole(eventKey); // Set the selected role
-        setRoleSelected(true); // Role is selected, enable buttons
+        setRoleSelected(true); // Role is selected
+
+        // Navigate based on selected role
+        if (eventKey === "Organiser") {
+            navigate("/ologin"); // Navigate to Organiser Login page
+        }
     };
 
     const handleRegister = () => {
-        if (roleSelected) {
-            navigate("/osignup"); // Navigate to OSignup page
+        if (role === "Participant") {
+            navigate("/osignup"); // Navigate to OSignup page for Participants
         }
     };
 

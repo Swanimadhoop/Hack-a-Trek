@@ -1,9 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import { MdAccountCircle, MdDownload } from "react-icons/md";
 import Button from "@mui/material/Button";
 import "./StartHackathon.css";
 
 export const StartHackathon = () => {
+  const navigate = useNavigate(); // Initialize navigation
+
+  // Function to handle navigation to the /submissions page
+  const handleStartHackathonClick = () => {
+    navigate("/submission");
+  };
+
   return (
     <div className="start-hackathon-page">
       {/* Header */}
@@ -25,7 +33,7 @@ export const StartHackathon = () => {
 
       {/* Main Content */}
       <div className="main-content">
-      <p className="hack-a-trek-start">
+        <p className="hack-a-trek-start">
           <span>Hack’</span>
           <span className="purple-start">a</span>
           <span>’Trek</span>
@@ -38,13 +46,12 @@ export const StartHackathon = () => {
           </div>
 
           <div className="details-box-start">
-            <p>Details </p>
+            <p>Details</p>
           </div>
           
-          <button className="start-hackathon-button">
+          <button className="start-hackathon-button" onClick={handleStartHackathonClick}>
             Start Hackathon
           </button>
-          
         </div>
 
         {/* Participant List */}

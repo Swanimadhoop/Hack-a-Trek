@@ -24,8 +24,10 @@
   transition: background-color 0.3s; /* Smooth transition for hover effect */
   position: relative;
   left: -30px;
-  bottom: -10px;
+  bottom: 310px;
 }
+
+
 
 .log-out-button:hover {
   background-color: #6f42c1; /* Darker violet on hover */
@@ -70,7 +72,7 @@
   justify-content: space-between;
   left: -20px;
   position: relative;
-  top: 10px;
+  top: -310px;
   left: 130px;
   align-items: center;
   width: 45%; /* Ensure the items are spread out horizontally */
@@ -130,7 +132,7 @@
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .form-label {

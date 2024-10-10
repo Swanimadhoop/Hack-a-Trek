@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
@@ -11,7 +10,6 @@ import { MdAccountCircle } from "react-icons/md";
 const ConductHackathon = () => {
   const navigate = useNavigate(); // Initialize useNavigate hook
 
-
   // State to store form data
   const [organisationName, setOrganisationName] = useState("");
   const [organisationEmail, setOrganisationEmail] = useState("");
@@ -19,12 +17,10 @@ const ConductHackathon = () => {
   const [errorMessage, setErrorMessage] = useState(""); // To handle errors
   const [successMessage, setSuccessMessage] = useState(""); // To handle success messages
 
-
   // Function to handle icon click and navigate to the profile page
   const handleIconClick = () => {
     navigate("/oprofile"); // Replace '/oprofile' with the correct path for your organizer profile page
   };
-
 
   // Function to handle form submission
   const handleSubmit = async (e) => {
@@ -43,6 +39,7 @@ const ConductHackathon = () => {
       });
 
       // Handle success - clear form and show success message
+      const { _id } = response.data; // Assuming the response contains the created hackathon ID
       setOrganisationName("");
       setOrganisationEmail("");
       setHackathonName("");
@@ -50,14 +47,13 @@ const ConductHackathon = () => {
 
       // Navigate to the next page after a short delay to show success message
       setTimeout(() => {
-        navigate("/detailsfill", { state: { hackathonName: hackathonName } }); // Replace '/success' with the path of the next page
+        navigate("/detailsfill", { state: { hackathonName, _id } }); // Pass both hackathonName and _id
       }, 2000); // Delay for 2 seconds
     } catch (error) {
       // Handle error and show error message
       setErrorMessage(error.response?.data?.message || "Failed to create hackathon. Please try again.");
     }
   };
-
 
   return (
     <div className="registration">
@@ -84,7 +80,6 @@ const ConductHackathon = () => {
 
         <div className="form-container">
           <div className="rectangle conduct-hackathon-form">
-
             <form onSubmit={handleSubmit}>
               <label htmlFor="organisationName">Organisation Name</label>
               <input 
@@ -123,7 +118,6 @@ const ConductHackathon = () => {
             {successMessage && <p className="success-message">{successMessage}</p>}
             {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>
-
 
           <img alt="Yellow Background" src={yelloBg} className="yello-bg-image-conduct" />
         </div>

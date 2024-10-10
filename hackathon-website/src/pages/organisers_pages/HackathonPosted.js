@@ -1,11 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "./HackathonPosted.css";
-import Button  from "@mui/material/Button";
+import Button from "@mui/material/Button";
 import { MdAccountCircle } from "react-icons/md";
 import Nunny from '../../../src/assets/v823-nunny-16b.jpg';
 
-
 export const HackathonPosted = () => {
+  const navigate = useNavigate(); // Initialize navigation
+
+  // Function to handle navigation to the /view page
+  const handleViewClick = () => {
+    navigate("/view");
+  };
+
   return (
     <div className="THANKYOU-PAGE">
       <div className="overlap-wrapper">
@@ -17,7 +24,7 @@ export const HackathonPosted = () => {
           </div>
           <div className="home-and-logout">
             <div className="div">
-              <div class="navigation-posted">
+              <div className="navigation-posted">
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Support</a>
@@ -30,7 +37,6 @@ export const HackathonPosted = () => {
                 Log Out
               </Button>
               <MdAccountCircle className="account-circle-posted" />
-
             </div>
           </div>
 
@@ -45,9 +51,8 @@ export const HackathonPosted = () => {
             <span className="text-wrapper-3"> POSTED </span>
             <span className="text-wrapper-4">SUCCESSFULLY</span>
             <span className="text-wrapper-3"> ...</span>
-            <button className="view-button">View</button>
+            <button className="view-button" onClick={handleViewClick}>View</button>
           </p>
-
 
           <div className="group">
           </div>
@@ -56,4 +61,5 @@ export const HackathonPosted = () => {
     </div>
   );
 };
+
 export default HackathonPosted;
