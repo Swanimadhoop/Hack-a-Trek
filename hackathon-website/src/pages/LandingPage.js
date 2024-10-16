@@ -7,22 +7,16 @@ import { useNavigate } from "react-router-dom"; // For navigation
 
 export const LandingPage = () => {
     const [role, setRole] = useState("Select Role"); // State to handle dropdown selection
-    const [roleSelected, setRoleSelected] = useState(false); // State to check if a role is selected
     const navigate = useNavigate(); // For page navigation
 
     const handleSelect = (eventKey) => {
         setRole(eventKey); // Set the selected role
-        setRoleSelected(true); // Role is selected
 
         // Navigate based on selected role
         if (eventKey === "Organiser") {
-            navigate("/ologin"); // Navigate to Organiser Login page
-        }
-    };
-
-    const handleRegister = () => {
-        if (role === "Participant") {
-            navigate("/osignup"); // Navigate to OSignup page for Participants
+            navigate("/ologin"); // Navigate to OLogin page
+        } else if (eventKey === "Participant") {
+            navigate("/plogin"); // Navigate to PLogin page
         }
     };
 
@@ -62,26 +56,18 @@ export const LandingPage = () => {
                         </Dropdown.Menu>
                     </Dropdown>
 
-                    {/* Warning Message */}
-                    {!roleSelected && <p className="warning-message">Please select a role to continue.</p>}
-
                     <label htmlFor="email">Email Address*</label>
-                    <input type="email" id="email" placeholder="Enter your email" disabled={!roleSelected} />
+                    <input type="email" id="email" placeholder="Enter your email" disabled />
 
                     <label htmlFor="password">Password*</label>
-                    <input type="password" id="password" placeholder="Enter your password" disabled={!roleSelected} />
+                    <input type="password" id="password" placeholder="Enter your password" disabled />
 
                     {/* Sign In Button */}
-                    <Button variant="primary" className="sign-in-button0" disabled={!roleSelected}>Sign In</Button>
+                    <Button variant="primary" className="sign-in-button0" disabled>Sign In</Button>
 
                     <p className="register-text0">
                         New User?{" "}
-                        <Button
-                            variant="link"
-                            className="nav-button0"
-                            onClick={handleRegister} // Call handleRegister function on click
-                            disabled={!roleSelected} // Disable if no role is selected
-                        >
+                        <Button variant="link" className="nav-button0" disabled>
                             Register
                         </Button>
                     </p>
@@ -97,3 +83,4 @@ export const LandingPage = () => {
 };
 
 export default LandingPage;
+
