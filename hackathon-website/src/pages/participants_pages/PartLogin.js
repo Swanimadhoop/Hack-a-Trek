@@ -10,7 +10,7 @@ export const PartLogin = () => {
   const navigate = useNavigate(); // For page navigation
 
   const handleSelect = (eventKey) => {
-    setRole(eventKey); // Set the selected role
+    setRole(eventKey); // Set the selected rohhle
   };
 
   const handleRegister = () => {
