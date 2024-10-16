@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import LandingPage from './pages/LandingPage';
 
-import RegistrationPage from './pages/participants_pages/RegistrationPage';
-import LoginPage from './pages/participants_pages/LoginPage';
+import PartSignup from './pages/participants_pages/PartSighup';
+import PartLogin from './pages/participants_pages/PartLogin';
 import HomePage from './pages/participants_pages/HomePage';
 import ViewmoreHackathon from './pages/participants_pages/ViewmoreHackathon';
 import ApplicationPage from './pages/participants_pages/ApplicationPage'
@@ -41,8 +41,8 @@ function App() {
 
         {/* Participant */}
 
-        <Route path="/register" element={<RegistrationPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/psignup" element={<PartSignup />} />
+        <Route path="/plogin" element={<PartLogin />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/viewhackathon" element={<ViewmoreHackathon />} />
         <Route path="/application" element={<ApplicationPage />} />
