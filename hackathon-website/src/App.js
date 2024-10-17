@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import LandingPage from './pages/LandingPage';
 
-import RegistrationPage from './pages/participants_pages/RegistrationPage';
-import LoginPage from './pages/participants_pages/LoginPage';
+import PartSignup from './pages/participants_pages/PartSighup';
+import PartLogin from './pages/participants_pages/PartLogin';
 import HomePage from './pages/participants_pages/HomePage';
 import ViewmoreHackathon from './pages/participants_pages/ViewmoreHackathon';
 import ApplicationPage from './pages/participants_pages/ApplicationPage'
@@ -25,9 +25,10 @@ import HackathonPosted from './pages/organisers_pages/HackathonPosted';
 import ViewHackathon from './pages/organisers_pages/ViewHackathon';
 import StartHackathon from './pages/organisers_pages/StartHackathon'
 import Feedback from './pages/organisers_pages/Feedback';
-
-import PublishResults from './pages/organisers_pages/PublishResults'
 import Submissions from './pages/organisers_pages/Submissions';
+import PublishResults from './pages/organisers_pages/PublishResults'
+import EndHackathon from './pages/organisers_pages/EndHackathon'
+import EndSubmission from './pages/organisers_pages/EndSubmission';
 import OrganiserProfile from './pages/organisers_pages/OrganiserProfile'
 
 
@@ -41,8 +42,8 @@ function App() {
 
         {/* Participant */}
 
-        <Route path="/register" element={<RegistrationPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/psignup" element={<PartSignup />} />
+        <Route path="/plogin" element={<PartLogin />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/viewhackathon" element={<ViewmoreHackathon />} />
         <Route path="/application" element={<ApplicationPage />} />
@@ -64,12 +65,12 @@ function App() {
         <Route path="/view" element={<ViewHackathon/>} />
         <Route path="/start" element={<StartHackathon/>} />
         <Route path="/feedback" element={<Feedback/>} />
-
         <Route path="/oprofile" element={<OrganiserProfile/>} />
+        <Route path="/submission" element={<Submissions/>} />
+        <Route path="/end" element={<EndHackathon/>} />
+        <Route path="/endsubmission" element={<EndSubmission/>} />
         <Route path="/publish" element={<PublishResults/>} />
 
-        
-        <Route path="/submission" element={<Submissions/>} />
 
 
 

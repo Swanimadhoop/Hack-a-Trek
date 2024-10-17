@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+
+  .part-login-header0{
+    font-family: "Atma", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.part-login-container0 {
+    display: flex;
+    flex-direction: column; /* Stack header and main content */
+    padding: 20px;
+    height: 100vh; /* Full viewport height * fgi/
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .whatsapp-image0 {
+    width: 550px; /* Set the desired width for the WhatsApp image */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Positioning the image */
+    right: 20px; /* Align image to the right with some margin */
+    top: 20%; /* Adjust this value to position it vertically as needed */
+  }
+  
+  .part-login-header0 {
+    display: absolute;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-left: 20px;
+    width: 100%;
+    font-size: xxx-large;
+  }
+  
+  .nav-container0 {
+    position: relative;
+    display: flex;
+    margin-left: 950px; /* Align nav buttons to the left */
+  }
+  
+  .nav-button0 {
+    margin-right: 20px; /* Proper spacing between nav buttons */
+  }
+  
+  .purple-letter0 {
+    color: #6F42C1; /* Purple color */
+  }
+      
+  
+  .main-content0 {
+    display: flex;
+    flex: 1; /* Take up remaining space */
+    align-items: flex-start; /* Align items to the start */
+    justify-content: flex-start; /* Align items to the left */
+    position: relative; /* Enable absolute positioning for child elements */
+  }
+  
+  .form-container0 {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px; /* Padding for form content */
+    max-width: 400px; /* Set a max-width to constrain the form's width */
+    margin-left: 0; /* Align the form to the left */
+  }
+  
+  label {
+    margin-top: 10px;
+    margin-bottom: 5px; /* Add some space below labels */
+  }
+  
+  input {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .sign-in-button0 {
+    margin-top: 20px;
+  }
+  
+  .register-text0 {
+    margin-top: 10px;
+    text-align: center; /* Center the register text */
+  }
+  
+  .yello-bg-image0 {
+    width: 100%; /* Full width of the container */
+    height: 60px; /* Fixed height for taskbar appearance */
+    position: absolute; /* Position at the bottom */
+    bottom: 0;
+    left: 0; /* Align to left */
+  }
+  
+  .dropdown-toggle0 {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+  }
+  
