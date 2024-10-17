@@ -34,7 +34,7 @@ body {
   
   .log-out-button-start {
     background-color: #65558f !important; /* Set violet background */
-    color: white !important; /* White text */
+    color: white !important; 
     padding: 10px 20px; /* Padding for the button */
     border-radius: 5px; /* Rounded corners */
     border: none;

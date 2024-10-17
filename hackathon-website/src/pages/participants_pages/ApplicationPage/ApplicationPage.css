@@ -1,47 +1,46 @@
-
-.view-hackathon {
+.application-page {
     background-color: #ffffff;
     display: flex;
     flex-direction: row; 
     justify-content: center; 
     width: 100%; 
 } 
-.view-hackathon .overlap-wrapper { 
+.application-page .overlap-wrapper-app { 
    background-color: #ffffff; 
    height: 832px; 
    overflow: hidden; 
    width: 1280px; 
 } 
 
-.view-hackathon .overlap { 
+.application-page .overlap-app { 
    height: 820px; 
    left: -28px; 
    position: relative; 
    top: -77px; 
    width: 1361px; 
 } 
-.view-hackathon .overlap-group { 
+.application-page .overlap-group-app { 
    height: 820px; 
    left: 0; 
    position: absolute; 
    top: 0; 
    width: 1361px; 
 } 
-.view-hackathon .yellow { 
+.application-page .yellow-app { 
    height: 146px; 
    left: 0; 
    position: absolute; 
    top: 0; 
    width: 1361px; 
 } 
-.view-hackathon .div { 
+.application-page .div-app { 
    height: 72px; 
    left: 21px; 
    position: relative; 
    top: 73px; 
    width: 1307px; 
 } 
-.view-hackathon .yellow-up { 
+.application-page .yellow-up-app { 
    background-color: #f6e11f; 
    height: 64px; 
    left: 0; 
@@ -49,26 +48,26 @@
    top: 0; 
    width: 1307px; 
 } 
-.view-hackathon .wallpaper-bg { 
-   height: 69px; 
-   left: 7px; 
-   mix-blend-mode: color-burn; 
-   position: absolute; 
-   top: 4px; 
-   width: 1280px; 
-} 
-.view-hackathon .home-and-logout { 
+
+.application-page .home-and-logout-app { 
+   color: white !important; 
+   padding: 10px 20px; /* Padding for the button */
+   border-radius: 5px; /* Rounded corners */
+   border: none;
+   cursor: pointer;
+   /* position: relative; */
+   transition: background-color 0.3s;
    height: 83px; 
-   left: 718px; 
+   left: 710px; 
    position: absolute; 
-   top: 61px; 
+   top: 55px; 
    width: 537px; 
 } 
-.view-hackathon .overlap-2 { 
+.application-page .overlap-2-app { 
    height: 83px; 
    position: relative; 
 } 
-.view-hackathon .home-abt-supp { 
+.application-page .home-abt-supp-app { 
    align-items: center;
    border: 0px none; 
    border-color: var(--color-border-default-default); 
@@ -85,24 +84,25 @@
    top: 0; 
    width: 505px; 
 } 
-.view-hackathon .navigation-pill-list { 
-   align-items: center; 
-   display: flex; 
-   flex: 1; 
-   flex-grow: 1; 
-   flex-wrap: wrap; 
-   gap: var(--size-space-150); 
-   justify-content: flex-end; 
-   margin-bottom: -6.5px; 
-   margin-top: -6.5px; 
-   position: relative; 
-} 
-.view-hackathon .navigation-pill { 
-   border-radius: var(--size-radius-200); 
-   flex: 0 0 auto; gap: var(--size-space-200); 
-   position: relative; 
-} 
-.view-hackathon .title-wrapper { 
+
+.application-page .navigation-app {
+   display: flex;
+   gap: 20px;
+ }
+ 
+ .application-page .navigation-app a {
+   text-decoration: none;
+   color: #65558f; /* Link color */
+   font-weight: bold; /* Bold font */
+   position: relative;
+   top: 30px;
+   left: 180px;
+ }
+
+ .application-page .navigation-app a:hover {
+   text-decoration: underline; /* Underline on hover */
+ } 
+.application-page .title-wrapper-app { 
    align-items: center; 
    border-radius: var(--size-radius-200); 
    display: inline-flex; 
@@ -111,7 +111,7 @@
    padding: var(--size-space-200); 
    position: relative; 
 } 
-.view-hackathon .title { 
+.application-page .title-app { 
    color: var(--color-text-default-default); 
    font-family: var(--single-line-body-base-font-family); 
    font-size: var(--single-line-body-base-font-size); 
@@ -122,7 +122,7 @@
    margin-top: -1px; position: relative; 
    white-space: nowrap; width: fit-content; 
 } 
-.view-hackathon .text-wrapper { 
+.application-page .text-wrapper-app { 
    color: var(--color-text-default-default); 
    font-family: var(--single-line-body-base-font-family); 
    font-size: var(--single-line-body-base-font-size); 
@@ -133,7 +133,7 @@
    margin-right: -1px; margin-top: -1px; position: relative; 
    white-space: nowrap; width: fit-content; 
 } 
-.view-hackathon .log-out { 
+.application-page .log-out-app { 
    align-items: center; 
    background-color: var(--color-background-neutral-tertiary); 
    border: 0.93px solid; border-color: var(--color-border-neutral-secondary); 
@@ -146,7 +146,7 @@
    top: 30px; 
    width: 64px; 
 } 
-.view-hackathon .logout { 
+.application-page .logout-app { 
    color: var(--color-text-default-default); 
    font-family: var(--single-line-body-base-font-family); 
    font-size: var(--single-line-body-base-font-size); 
@@ -162,14 +162,14 @@
    white-space: nowrap; 
    width: fit-content; 
 } 
-.view-hackathon .account-circle { 
+.application-page .account-circle-app { 
    height: 41px !important; 
    left: 59px !important; 
    position: absolute !important; 
    top: 84px !important; 
    width: 41px !important; 
 } 
-.view-hackathon .text { 
+.application-page .text-app { 
    color: #000000; 
    font-family: "Inter-Bold", Helvetica; 
    font-size: 41.7px; 
@@ -181,40 +181,55 @@
    top: 365px; 
    white-space: nowrap; 
 } 
-.view-hackathon .group { 
+.application-page .group-app { 
    height: 87px; 
    left: 311px; 
    position: absolute; 
    top: 576px; 
    width: 307px; 
 } 
-.view-hackathon .hack-a-trek { 
-   color: transparent; 
-   font-family: "Atma-Bold", Helvetica; 
-   font-size: 26px; 
-   font-weight: 700; 
-   left: 568px; 
-   letter-spacing: 0; 
-   line-height: 27.6px; 
-   position: absolute; 
-   top: 91px; 
-   width: 192px; 
-} 
-.view-hackathon .span { 
-   color: #65558f; 
-} 
-.view-hackathon .text-wrapper-2 { 
+
+ 
+.log-out-btton-app{
+   background-color: #65558f !important; /* Set the button color to violet */
+   color: white; /* Text color */
+   border: none; /* Remove border */
+   padding: 10px 10px; /* Add some padding */
+   border-radius: 15px; /* Rounded corners */
+   cursor: pointer; /* Change cursor on hover */
+   margin-left: 20px; /* Move it slightly to the left */
+   transition: background-color 0.3s; /* Smooth transition for hover effect */
+   position: relative;
+   left: 450px;
+   bottom: 1px;
+ }
+ 
+.hack-a-trek-details-app {
+   font-family: Atma,system-ui;
+   font-size: large;
+   position: relative;
+   left: 550px;
+   top: 90px;
+   font-size: 26px;
+   font-weight: bold;
+ }
+
+
+.application-page .span-app { 
    color: #000000db; 
 } 
-.view-hackathon .rectangle { 
-   background-color: #d9d9d9; 
+.application-page .text-wrapper-2-app { 
+      color: #65558f; 
+
+} 
+.application-page .rectangle-app { 
    border-radius: 20px; 
    height: 640px; 
    left: 48px; 
    position: absolute; 
    top: 180px; 
    width: 817px; 
-} .view-hackathon .hackathon-idea { 
+} .application-page .hackathon-idea-app { 
    color: #000000; 
    font-family: "Inter-Light", Helvetica; 
    font-size: 19.2px; 
@@ -226,7 +241,7 @@
    top: 544px; 
    width: 210px; 
 } 
-.view-hackathon .rectangle-2 { 
+.application-page .rectangle-2-app { 
    background-color: #ffffff; 
    border-radius: 20px; 
    height: 292px; 
@@ -235,19 +250,19 @@
    top: 196px; 
    width: 352px; 
 } 
-.view-hackathon .overlap-group-wrapper { 
+.application-page .overlap-group-wrapper-app { 
    height: 646px; 
    left: 288px; 
    position: absolute; 
    top: 92px; 
    width: 472px; 
 } 
-.view-hackathon .overlap-3 { 
+.application-page .overlap-3-app { 
    height: 646px; 
    position: relative; 
    width: 474px; 
 } 
-.view-hackathon .rectangle-3 { 
+.application-page .rectangle-3-app { 
    background-color: #ffffff; 
    border-radius: 20px; 
    height: 204px; 
@@ -256,37 +271,15 @@
    top: 442px; 
    width: 353px; 
 } 
-.view-hackathon .group-2 { 
+.application-page .group-2-app { 
    height: 571px; 
    left: 23px; 
    position: absolute; 
    top: 0; 
    width: 451px; 
 } 
-.view-hackathon .vector { 
-   height: 1px; 
-   left: 0; 
-   object-fit: cover; 
-   position: absolute; 
-   top: 484px; width: 306px; 
-} 
-.view-hackathon .img { 
-   height: 1px; 
-   left: 1px; 
-   object-fit: cover; 
-   position: absolute; 
-   top: 528px; 
-   width: 306px; 
-} 
-.view-hackathon .vector-2 { 
-   height: 1px; 
-   left: 0; 
-   object-fit: cover; 
-   position: absolute; 
-   top: 570px; 
-   width: 306px; 
-} 
-.view-hackathon .p { 
+
+.application-page .p { 
    color: transparent; 
    font-family: "Atma-Bold", Helvetica; 
    font-size: 26px; 
@@ -298,7 +291,7 @@
    top: 0; 
    width: 192px; 
 } 
-.member-input-group {
+.member-input-group-app {
    margin-top: 15px; /* Space between member input groups */
  }
  
@@ -307,13 +300,20 @@
    display: block; /* Display labels as block */
    margin-top: 10px; /* Space between labels */
  }
+
+ .team-name-label,
+ .team-leader-name,
+ .team-leader-email{
+   position: relative;
+   align-items: center;
+ }
  
  .member-input,
  .email-input {
    width: 100%; /* Full width */
    padding: 10px; /* Padding for input */
    border: 1px solid #ccc; /* Border for input */
-   border-radius: 4px; /* Rounded corners for input */
+   border-radius: 4px; /* Rounded corners for input */     
  }
  
  .add-more-button {
@@ -324,6 +324,8 @@
    border: none; /* No border */
    border-radius: 4px; /* Rounded corners for button */
    cursor: pointer; /* Pointer cursor on hover */
+   position: relative;
+   top: -60px;
  }
  
  .add-more-button:hover {
@@ -344,16 +346,10 @@
  .register-button:hover {
    background-color:#0056b3; /* Darker green on hover */
  }
-.view-hackathon .div-wrapper { height: 278px; left: 100px; position: absolute; top: 227px; width: 587px; } 
-.view-hackathon .overlap-4 { height: 278px; position: relative; width: 585px; } 
-.view-hackathon .team-name-team { color: #000000; font-family: "Inter-Light", Helvetica; font-size: 19.2px; font-weight: 300; left: 0; letter-spacing: 0; line-height: 20.4px; position: absolute; top: 0; width: 585px; } 
-.view-hackathon .text-wrapper-3 { color: #65558f; font-family: "Inter-Light", Helvetica; font-size: 13.2px; font-weight: 300; left: 305px; letter-spacing: 0; line-height: 14px; position: absolute; text-decoration: underline; top: 431px; width: 86px; } 
-.view-hackathon .button { all: unset; align-items: center; background-color: var(--m3-schemes-primary); border-radius: 84.26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6.74px; height: 39px; justify-content: center; left: 407px; overflow: hidden; position: absolute; top: 756px; width: 99px; } 
-.view-hackathon .state-layer { align-items: center; align-self: stretch; display: flex; flex: 1; flex-grow: 1; gap: 6.74px; justify-content: center; padding: 8.43px 20.22px; position: relative; width: 100%; } 
-.view-hackathon .label-text { color: var(--m3-schemes-on-primary); font-family: var(--m3-label-large-font-family); font-size: var(--m3-label-large-font-size); font-style: var(--m3-label-large-font-style); font-weight: var(--m3-label-large-font-weight); letter-spacing: var(--m3-label-large-letter-spacing); line-height: var(--m3-label-large-line-height); position: relative; text-align: center; white-space: nowrap; width: fit-content; } 
-.view-hackathon .overlap-5 { background-size: 100% 100%; height: 230px; left: 908px; position: absolute; top: 180px; width: 372px; } 
-.view-hackathon .rectangle-4 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 15px; position: absolute; top: 13px; width: 341px; } 
-.view-hackathon .hackathon-name { color: #000000; font-family: "Inter-Light", Helvetica; font-size: 24.6px; font-weight: 300; left: 83px; letter-spacing: 0; line-height: 26.1px; position: absolute; text-align: center; top: 84px; width: 206px; }
+ .application-page .div-wrapper-app { height: 278px; left: 100px; position: absolute; top: 227px; width: 587px; } 
+ .application-page .overlap-5 { background-size: 100% 100%; height: 230px; left: 908px; position: absolute; top: 180px; width: 372px; } 
+.application-page .rectangle-4 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 15px; position: absolute; top: 13px; width: 341px; } 
+.application-page .hackathon-name { color: #000000; font-family: "Inter-Light", Helvetica; font-size: 24.6px; font-weight: 300; left: 83px; letter-spacing: 0; line-height: 26.1px; position: absolute; text-align: center; top: 84px; width: 206px; }
 
 
 

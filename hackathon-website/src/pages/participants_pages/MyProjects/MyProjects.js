@@ -1,6 +1,6 @@
 import React from "react";
 import { MdAccountCircle } from "react-icons/md";
-import "./ViewmoreHackathon.css";
+import "./MyProjects.css"
 
 // Define the Button component
 const Button = ({ labelText }) => {
@@ -20,7 +20,7 @@ const NavigationPill = ({ label }) => {
   );
 };
 
-export const ViewmoreHackathon = () => {
+export const MyProjects = () => {
   return (
     <div className="view-more-hackathon">
       <div className="div">
@@ -80,7 +80,7 @@ export const ViewmoreHackathon = () => {
           <div className="rectangle" />
           <Button labelText="View" />
         </div>
-        <div className="text-wrapper-2">All Projects</div>
+        <div className="text-wrapper-2">My Projects</div>
         <div className="group">
           <div className="rectangle-4" />
         </div>
@@ -95,4 +95,4 @@ export const ViewmoreHackathon = () => {
   );
 };
 
-export default ViewmoreHackathon;
+export default MyProjects;

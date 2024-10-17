@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate for naviga
 import "./ThankyouPage.css";
 import Button from "@mui/material/Button";
 import { MdAccountCircle } from "react-icons/md";
-import Nunny from '../../../src/assets/v823-nunny-16b.jpg';
+import Nunny from '../../../../src/assets/v823-nunny-16b.jpg';
 
 export const ThankyouPage = () => {
   const navigate = useNavigate(); // Initialize navigation

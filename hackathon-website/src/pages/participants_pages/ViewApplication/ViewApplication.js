@@ -1,23 +1,19 @@
 import React, { useState } from "react";
 import { MdAccountCircle } from "react-icons/md";
-import "./ApplicationPage.css";
+import "./ViewApplication.css";
 import Button from "@mui/material/Button"; // Importing Material-UI Button
 
-export const ApplicationPage = () => {
-  const [teamName, setTeamName] = useState("");
-  const [teamLeader, setTeamLeader] = useState("");
-  const [teamLeaderEmail, setTeamLeaderEmail] = useState("");
-  const [hackathonIdea, setHackathonIdea] = useState("");
-  const [members, setMembers] = useState([{ name: "", email: "" }]);
+export const ViewApplication = () => {
+  const [teamName, setTeamName] = useState("Pre-filled Team Name");
+  const [teamLeader, setTeamLeader] = useState("Pre-filled Team Leader Name");
+  const [teamLeaderEmail, setTeamLeaderEmail] = useState("leader@example.com");
+  const [hackathonIdea, setHackathonIdea] = useState("Pre-filled Hackathon Idea");
+  const [members, setMembers] = useState([
+    { name: "Member 1 Name", email: "member1@example.com" }
+  ]);
 
   const handleAddMember = () => {
-    setMembers([...members, { name: "", email: "" }]);
-  };
-
-  const handleMemberChange = (index, event) => {
-    const newMembers = [...members];
-    newMembers[index][event.target.name] = event.target.value;
-    setMembers(newMembers);
+    setMembers([...members, { name: "New Member Name", email: "newmember@example.com" }]);
   };
 
   return (
@@ -31,38 +27,37 @@ export const ApplicationPage = () => {
               </div>
             </div>
             <nav className="home-and-logout-app">
-        <div className="navigation-app">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Support</a>
-        </div>
-        <Button
-          variant="contained-app"
-          className="log-out-btton-app"
-          onClick={() => console.log("Logging out")} // Add your logout functionality here
-        >
-          Log Out
-        </Button>
-      </nav>
+              <div className="navigation-app">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Support</a>
+              </div>
+              <Button
+                variant="contained-app"
+                className="log-out-btton-app"
+                onClick={() => console.log("Logging out")} // Add your logout functionality here
+              >
+                Log Out
+              </Button>
+            </nav>
 
-      <MdAccountCircle className="account-circle-app" />
-      <p className="hack-a-trek-details-ap-">
-        <span className="span-app">Hack’</span>
-        <span className="text-wrapper-2-app">a</span>
-        <span className="span-app">’Trek</span>
-      </p>
+            <MdAccountCircle className="account-circle-app" />
+            <p className="hack-a-trek-details-app">
+              <span className="span-app">Hack’</span>
+              <span className="text-wrapper-2-app">a</span>
+              <span className="span-app">’Trek</span>
+            </p>
 
             <div className="rectangle-app" />
             <div className="div-wrapper-app">
               <div className="overlap-4-app">
-                <label className="team-name-label-app">
+                <label className="team-name-label">
                   Team Name:
                   <input
                     type="text"
                     value={teamName}
-                    onChange={(e) => setTeamName(e.target.value)}
+                    readOnly // Making the input non-editable
                     className="team-name-input"
-                    placeholder="Enter your team name"
                   />
                 </label>
                 <label className="team-leader-label">
@@ -70,19 +65,17 @@ export const ApplicationPage = () => {
                   <input
                     type="text"
                     value={teamLeader}
-                    onChange={(e) => setTeamLeader(e.target.value)}
+                    readOnly // Making the input non-editable
                     className="team-leader-input"
-                    placeholder="Enter team leader name"
                   />
                 </label>
                 <label className="email-label">
                   Email ID:
                   <input
-                    type="TeamLeaderEmail"
+                    type="text"
                     value={teamLeaderEmail}
-                    onChange={(e) => setTeamLeaderEmail(e.target.value)}
+                    readOnly // Making the input non-editable
                     className="TeamLeaderEmail-input"
-                    placeholder="Enter email ID"
                   />
                 </label>
 
@@ -95,48 +88,36 @@ export const ApplicationPage = () => {
                         type="text"
                         name="name"
                         value={member.name}
-                        onChange={(e) => handleMemberChange(index, e)}
+                        readOnly // Making the input non-editable
                         className="member-input"
-                        placeholder="Enter member name"
                       />
                     </label>
                     <label className="email-label">
                       Email ID:
                       <input
-                        type="email"
+                        type="text"
                         name="email"
                         value={member.email}
-                        onChange={(e) => handleMemberChange(index, e)}
+                        readOnly // Making the input non-editable
                         className="email-input"
-                        placeholder="Enter email ID"
                       />
                     </label>
                   </div>
                 ))}
 
-                <div className="text-wrapper-2" style={{ marginTop: "15px" }}>
-                  <button onClick={handleAddMember} className="add-more-button">
-                    Add more +
-                  </button>
-                </div>
-
+                
                 <label className="hackathon-idea-label">
                   Hackathon Idea:
                   <input
                     type="text"
                     value={hackathonIdea}
-                    onChange={(e) => setHackathonIdea(e.target.value)}
+                    readOnly // Making the input non-editable
                     className="hackathon-idea-input"
-                    placeholder="Enter your hackathon idea"
                   />
                 </label>
-                {/* Register button */}
-                <button className="button-instance register-button">
-                  Register
-                </button>
+                
               </div>
             </div>
-            <button className="button-instance">Register</button>
           </div>
           <div className="overlap-5">
             <div className="rectangle-4" />
@@ -148,4 +129,4 @@ export const ApplicationPage = () => {
   );
 };
 
-export default ApplicationPage;
+export default ViewApplication;
