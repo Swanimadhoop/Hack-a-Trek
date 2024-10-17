@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate from React
 import axios from "axios"; // Import axios for making HTTP requests
 
 import "./ConductHackathon.css";
-import yelloBg from "../../../src/assets/yellow.svg.png";
+import yelloBg from "../../../../src/assets/yellow.svg.png";
 import { MdAccountCircle } from "react-icons/md";
 
 const ConductHackathon = () => {

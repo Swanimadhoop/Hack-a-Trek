@@ -19,7 +19,7 @@ import WinnersPage from './pages/participants_pages/WinnersPage';
 
 import OrgLogin from './pages/organisers_pages/OrgLogin';
 import OrgSignup from './pages/organisers_pages/OrgSignup';
-import ConductHackathon from './pages/organisers_pages/ConductHackathon';
+import ConductHackathon from './pages/organisers_pages/ConductHackathon/ConductHackathon';
 import DetailsFillPage from './pages/organisers_pages/DetailsFillPage'
 import HackathonPosted from './pages/organisers_pages/HackathonPosted';
 import ViewHackathon from './pages/organisers_pages/ViewHackathon';
