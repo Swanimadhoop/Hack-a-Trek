@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdAccountCircle } from "react-icons/md";
 import "./ApplicationPage.css";
+import Button from "@mui/material/Button"; // Importing Material-UI Button
 
 export const ApplicationPage = () => {
   const [teamName, setTeamName] = useState("");
@@ -21,31 +22,40 @@ export const ApplicationPage = () => {
 
   return (
     <div className="application-page">
-      <div className="overlap-wrapper">
-        <div className="overlap">
-          <div className="overlap-group">
-            <div className="yellow">
-              <div className="div">
-                <div className="yellow-up" />
+      <div className="overlap-wrapper-app">
+        <div className="overlap-app">
+          <div className="overlap-group-app">
+            <div className="yellow-app">
+              <div className="div-app">
+                <div className="yellow-up-app" />
               </div>
             </div>
-            <div className="home-and-logout">
-              <div className="overlap-2">
-                <div className="log-out">
-                  <div className="logout">Log out</div>
-                </div>
-              </div>
-            </div>
-            <MdAccountCircle className="Mdaccount-circle" />
-            <p className="hack-a-trek">
-              <span className="text-wrapper">Hack’</span>
-              <span className="span">a</span>
-              <span className="text-wrapper">’Trek</span>
-            </p>
-            <div className="rectangle" />
-            <div className="div-wrapper">
-              <div className="overlap-4">
-                <label className="team-name-label">
+            <nav className="home-and-logout-app">
+        <div className="navigation-app">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Support</a>
+        </div>
+        <Button
+          variant="contained-app"
+          className="log-out-btton-app"
+          onClick={() => console.log("Logging out")} // Add your logout functionality here
+        >
+          Log Out
+        </Button>
+      </nav>
+
+      <MdAccountCircle className="account-circle-app" />
+      <p className="hack-a-trek-details-ap-">
+        <span className="span-app">Hack’</span>
+        <span className="text-wrapper-2-app">a</span>
+        <span className="span-app">’Trek</span>
+      </p>
+
+            <div className="rectangle-app" />
+            <div className="div-wrapper-app">
+              <div className="overlap-4-app">
+                <label className="team-name-label-app">
                   Team Name:
                   <input
                     type="text"

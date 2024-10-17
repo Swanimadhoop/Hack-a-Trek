@@ -11,7 +11,7 @@ import ApplicationPage from './pages/participants_pages/ApplicationPage'
 import ThankyouPage from './pages/participants_pages/ThankyouPage'
 import ParticipantProfile from './pages/participants_pages/ParticipantProfile'
 import EventDay from './pages/participants_pages/EventDay';
-import AppliedHackathon from './pages/participants_pages/AppliedHackathon';
+import ViewApplication from './pages/participants_pages/ViewApplication';
 import Projects from "./pages/participants_pages/Projects"
 import MyProjects from "./pages/participants_pages/MyProjects"
 import WinnersPage from './pages/participants_pages/WinnersPage';
@@ -51,7 +51,7 @@ function App() {
         <Route path="/thankyou" element={<ThankyouPage />} />
         <Route path="/pprofile" element={<ParticipantProfile />} />
         <Route path="/peventday" element={<EventDay />} />
-        <Route path="/appliedhackathon" element={<AppliedHackathon />} />
+        <Route path="/viewapplication" element={<ViewApplication />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/myprojects" element={<MyProjects />} />
 

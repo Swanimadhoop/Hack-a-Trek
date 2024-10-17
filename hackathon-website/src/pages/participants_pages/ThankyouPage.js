@@ -1,9 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "./ThankyouPage.css";
+import Button from "@mui/material/Button";
+import { MdAccountCircle } from "react-icons/md";
 import Nunny from '../../../src/assets/v823-nunny-16b.jpg';
 
-
 export const ThankyouPage = () => {
+  const navigate = useNavigate(); // Initialize navigation
+
+  // Function to handle navigation to the /view page
+  const handleViewClick = () => {
+    navigate("/viewapplication");
+  };
+
   return (
     <div className="THANKYOU-PAGE">
       <div className="overlap-wrapper">
@@ -15,22 +24,25 @@ export const ThankyouPage = () => {
           </div>
           <div className="home-and-logout">
             <div className="div">
-              <div className="home-abt-supp">
-                <div className="navigation-pill-list">
-                  <div className="navigation-pill-2" />
-                  <div className="navigation-pill-instance">Home</div>
-                  <div className="navigation-pill-instance">About</div>
-                  <div className="navigation-pill-instance">Support</div>
-                </div>
+              <div className="navigation-posted">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Support</a>
               </div>
-              <div className="log-out">
-                <div className="logout">Log out</div>
-              </div>
+              <Button 
+                variant="contained" 
+                className="log-out-button-posted" 
+                onClick={() => console.log("Logging out")} // Add your logout functionality here
+              >
+                Log Out
+              </Button>
+              <MdAccountCircle className="account-circle-posted" />
             </div>
           </div>
+
           <p className="hack-a-trek">
             <span className="text-wrapper">Hack’</span>
-            <span className="span">a</span>
+            <span className="purple-posted">a</span>
             <span className="text-wrapper">’Trek</span>
           </p>
           <img className="nunny" alt="Nunny" src={Nunny} />
@@ -39,13 +51,15 @@ export const ThankyouPage = () => {
             <span className="text-wrapper-3"> FOR </span>
             <span className="text-wrapper-4">REGISTERING</span>
             <span className="text-wrapper-3"> ...</span>
+            <button className="view-button" onClick={handleViewClick}>View</button>
           </p>
+
           <div className="group">
-            <img className="icon" alt="Icon" src="icon.svg" />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default ThankyouPage;

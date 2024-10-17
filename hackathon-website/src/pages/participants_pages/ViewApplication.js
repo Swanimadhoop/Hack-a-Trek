@@ -1,8 +1,8 @@
 import React from "react";
 import { MdAccountCircle } from "react-icons/md"; // Assuming this is still needed
-import "./AppliedHackathon.css";
+import "./ViewApplication.css";
 
-export const AppliedHackathon = () => {
+export const ViewApplication = () => {
   return (
     <div className="application-page">
       <div className="overlap-wrapper">
@@ -85,4 +85,4 @@ export const AppliedHackathon = () => {
   );
 };
 
-export default AppliedHackathon; 
+export default ViewApplication; 

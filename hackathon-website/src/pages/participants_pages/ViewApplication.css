@@ -1,47 +1,47 @@
 
-.application-page {
+.view-hackathon {
     background-color: #ffffff;
     display: flex;
     flex-direction: row; 
     justify-content: center; 
     width: 100%; 
 } 
-.application-page .overlap-wrapper { 
+.view-hackathon .overlap-wrapper { 
    background-color: #ffffff; 
    height: 832px; 
    overflow: hidden; 
    width: 1280px; 
 } 
 
-.application-page .overlap { 
+.view-hackathon .overlap { 
    height: 820px; 
    left: -28px; 
    position: relative; 
    top: -77px; 
    width: 1361px; 
 } 
-.application-page .overlap-group { 
+.view-hackathon .overlap-group { 
    height: 820px; 
    left: 0; 
    position: absolute; 
    top: 0; 
    width: 1361px; 
 } 
-.application-page .yellow { 
+.view-hackathon .yellow { 
    height: 146px; 
    left: 0; 
    position: absolute; 
    top: 0; 
    width: 1361px; 
 } 
-.application-page .div { 
+.view-hackathon .div { 
    height: 72px; 
    left: 21px; 
    position: relative; 
    top: 73px; 
    width: 1307px; 
 } 
-.application-page .yellow-up { 
+.view-hackathon .yellow-up { 
    background-color: #f6e11f; 
    height: 64px; 
    left: 0; 
@@ -49,7 +49,7 @@
    top: 0; 
    width: 1307px; 
 } 
-.application-page .wallpaper-bg { 
+.view-hackathon .wallpaper-bg { 
    height: 69px; 
    left: 7px; 
    mix-blend-mode: color-burn; 
@@ -57,18 +57,18 @@
    top: 4px; 
    width: 1280px; 
 } 
-.application-page .home-and-logout { 
+.view-hackathon .home-and-logout { 
    height: 83px; 
    left: 718px; 
    position: absolute; 
    top: 61px; 
    width: 537px; 
 } 
-.application-page .overlap-2 { 
+.view-hackathon .overlap-2 { 
    height: 83px; 
    position: relative; 
 } 
-.application-page .home-abt-supp { 
+.view-hackathon .home-abt-supp { 
    align-items: center;
    border: 0px none; 
    border-color: var(--color-border-default-default); 
@@ -85,7 +85,7 @@
    top: 0; 
    width: 505px; 
 } 
-.application-page .navigation-pill-list { 
+.view-hackathon .navigation-pill-list { 
    align-items: center; 
    display: flex; 
    flex: 1; 
@@ -97,12 +97,12 @@
    margin-top: -6.5px; 
    position: relative; 
 } 
-.application-page .navigation-pill { 
+.view-hackathon .navigation-pill { 
    border-radius: var(--size-radius-200); 
    flex: 0 0 auto; gap: var(--size-space-200); 
    position: relative; 
 } 
-.application-page .title-wrapper { 
+.view-hackathon .title-wrapper { 
    align-items: center; 
    border-radius: var(--size-radius-200); 
    display: inline-flex; 
@@ -111,7 +111,7 @@
    padding: var(--size-space-200); 
    position: relative; 
 } 
-.application-page .title { 
+.view-hackathon .title { 
    color: var(--color-text-default-default); 
    font-family: var(--single-line-body-base-font-family); 
    font-size: var(--single-line-body-base-font-size); 
@@ -122,7 +122,7 @@
    margin-top: -1px; position: relative; 
    white-space: nowrap; width: fit-content; 
 } 
-.application-page .text-wrapper { 
+.view-hackathon .text-wrapper { 
    color: var(--color-text-default-default); 
    font-family: var(--single-line-body-base-font-family); 
    font-size: var(--single-line-body-base-font-size); 
@@ -133,7 +133,7 @@
    margin-right: -1px; margin-top: -1px; position: relative; 
    white-space: nowrap; width: fit-content; 
 } 
-.application-page .log-out { 
+.view-hackathon .log-out { 
    align-items: center; 
    background-color: var(--color-background-neutral-tertiary); 
    border: 0.93px solid; border-color: var(--color-border-neutral-secondary); 
@@ -146,7 +146,7 @@
    top: 30px; 
    width: 64px; 
 } 
-.application-page .logout { 
+.view-hackathon .logout { 
    color: var(--color-text-default-default); 
    font-family: var(--single-line-body-base-font-family); 
    font-size: var(--single-line-body-base-font-size); 
@@ -162,14 +162,14 @@
    white-space: nowrap; 
    width: fit-content; 
 } 
-.application-page .account-circle { 
+.view-hackathon .account-circle { 
    height: 41px !important; 
    left: 59px !important; 
    position: absolute !important; 
    top: 84px !important; 
    width: 41px !important; 
 } 
-.application-page .text { 
+.view-hackathon .text { 
    color: #000000; 
    font-family: "Inter-Bold", Helvetica; 
    font-size: 41.7px; 
@@ -181,14 +181,14 @@
    top: 365px; 
    white-space: nowrap; 
 } 
-.application-page .group { 
+.view-hackathon .group { 
    height: 87px; 
    left: 311px; 
    position: absolute; 
    top: 576px; 
    width: 307px; 
 } 
-.application-page .hack-a-trek { 
+.view-hackathon .hack-a-trek { 
    color: transparent; 
    font-family: "Atma-Bold", Helvetica; 
    font-size: 26px; 
@@ -200,13 +200,13 @@
    top: 91px; 
    width: 192px; 
 } 
-.application-page .span { 
+.view-hackathon .span { 
    color: #65558f; 
 } 
-.application-page .text-wrapper-2 { 
+.view-hackathon .text-wrapper-2 { 
    color: #000000db; 
 } 
-.application-page .rectangle { 
+.view-hackathon .rectangle { 
    background-color: #d9d9d9; 
    border-radius: 20px; 
    height: 640px; 
@@ -214,7 +214,7 @@
    position: absolute; 
    top: 180px; 
    width: 817px; 
-} .application-page .hackathon-idea { 
+} .view-hackathon .hackathon-idea { 
    color: #000000; 
    font-family: "Inter-Light", Helvetica; 
    font-size: 19.2px; 
@@ -226,7 +226,7 @@
    top: 544px; 
    width: 210px; 
 } 
-.application-page .rectangle-2 { 
+.view-hackathon .rectangle-2 { 
    background-color: #ffffff; 
    border-radius: 20px; 
    height: 292px; 
@@ -235,19 +235,19 @@
    top: 196px; 
    width: 352px; 
 } 
-.application-page .overlap-group-wrapper { 
+.view-hackathon .overlap-group-wrapper { 
    height: 646px; 
    left: 288px; 
    position: absolute; 
    top: 92px; 
    width: 472px; 
 } 
-.application-page .overlap-3 { 
+.view-hackathon .overlap-3 { 
    height: 646px; 
    position: relative; 
    width: 474px; 
 } 
-.application-page .rectangle-3 { 
+.view-hackathon .rectangle-3 { 
    background-color: #ffffff; 
    border-radius: 20px; 
    height: 204px; 
@@ -256,21 +256,21 @@
    top: 442px; 
    width: 353px; 
 } 
-.application-page .group-2 { 
+.view-hackathon .group-2 { 
    height: 571px; 
    left: 23px; 
    position: absolute; 
    top: 0; 
    width: 451px; 
 } 
-.application-page .vector { 
+.view-hackathon .vector { 
    height: 1px; 
    left: 0; 
    object-fit: cover; 
    position: absolute; 
    top: 484px; width: 306px; 
 } 
-.application-page .img { 
+.view-hackathon .img { 
    height: 1px; 
    left: 1px; 
    object-fit: cover; 
@@ -278,7 +278,7 @@
    top: 528px; 
    width: 306px; 
 } 
-.application-page .vector-2 { 
+.view-hackathon .vector-2 { 
    height: 1px; 
    left: 0; 
    object-fit: cover; 
@@ -286,7 +286,7 @@
    top: 570px; 
    width: 306px; 
 } 
-.application-page .p { 
+.view-hackathon .p { 
    color: transparent; 
    font-family: "Atma-Bold", Helvetica; 
    font-size: 26px; 
@@ -344,21 +344,16 @@
  .register-button:hover {
    background-color:#0056b3; /* Darker green on hover */
  }
-.application-page .div-wrapper { height: 278px; left: 100px; position: absolute; top: 227px; width: 587px; } 
-.application-page .overlap-4 { height: 278px; position: relative; width: 585px; } 
-.application-page .team-name-team { color: #000000; font-family: "Inter-Light", Helvetica; font-size: 19.2px; font-weight: 300; left: 0; letter-spacing: 0; line-height: 20.4px; position: absolute; top: 0; width: 585px; } 
-.application-page .vector-3 { height: 1px; left: 205px; object-fit: cover; position: absolute; top: 56px; width: 306px; } 
-.application-page .vector-4 { height: 1px; left: 206px; object-fit: cover; position: absolute; top: 16px; width: 306px; } 
-.application-page .vector-5 { height: 1px; left: 205px; object-fit: cover; position: absolute; top: 96px; width: 306px; } 
-.application-page .vector-6 { height: 1px; left: 205px; object-fit: cover; position: absolute; top: 138px; width: 306px; } 
-.application-page .vector-7 { height: 1px; left: 206px; object-fit: cover; position: absolute; top: 182px; width: 306px; } 
-.application-page .text-wrapper-3 { color: #65558f; font-family: "Inter-Light", Helvetica; font-size: 13.2px; font-weight: 300; left: 305px; letter-spacing: 0; line-height: 14px; position: absolute; text-decoration: underline; top: 431px; width: 86px; } 
-.application-page .button { all: unset; align-items: center; background-color: var(--m3-schemes-primary); border-radius: 84.26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6.74px; height: 39px; justify-content: center; left: 407px; overflow: hidden; position: absolute; top: 756px; width: 99px; } 
-.application-page .state-layer { align-items: center; align-self: stretch; display: flex; flex: 1; flex-grow: 1; gap: 6.74px; justify-content: center; padding: 8.43px 20.22px; position: relative; width: 100%; } 
-.application-page .label-text { color: var(--m3-schemes-on-primary); font-family: var(--m3-label-large-font-family); font-size: var(--m3-label-large-font-size); font-style: var(--m3-label-large-font-style); font-weight: var(--m3-label-large-font-weight); letter-spacing: var(--m3-label-large-letter-spacing); line-height: var(--m3-label-large-line-height); position: relative; text-align: center; white-space: nowrap; width: fit-content; } 
-.application-page .overlap-5 { background-size: 100% 100%; height: 230px; left: 908px; position: absolute; top: 180px; width: 372px; } 
-.application-page .rectangle-4 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 15px; position: absolute; top: 13px; width: 341px; } 
-.application-page .hackathon-name { color: #000000; font-family: "Inter-Light", Helvetica; font-size: 24.6px; font-weight: 300; left: 83px; letter-spacing: 0; line-height: 26.1px; position: absolute; text-align: center; top: 84px; width: 206px; }
+.view-hackathon .div-wrapper { height: 278px; left: 100px; position: absolute; top: 227px; width: 587px; } 
+.view-hackathon .overlap-4 { height: 278px; position: relative; width: 585px; } 
+.view-hackathon .team-name-team { color: #000000; font-family: "Inter-Light", Helvetica; font-size: 19.2px; font-weight: 300; left: 0; letter-spacing: 0; line-height: 20.4px; position: absolute; top: 0; width: 585px; } 
+.view-hackathon .text-wrapper-3 { color: #65558f; font-family: "Inter-Light", Helvetica; font-size: 13.2px; font-weight: 300; left: 305px; letter-spacing: 0; line-height: 14px; position: absolute; text-decoration: underline; top: 431px; width: 86px; } 
+.view-hackathon .button { all: unset; align-items: center; background-color: var(--m3-schemes-primary); border-radius: 84.26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6.74px; height: 39px; justify-content: center; left: 407px; overflow: hidden; position: absolute; top: 756px; width: 99px; } 
+.view-hackathon .state-layer { align-items: center; align-self: stretch; display: flex; flex: 1; flex-grow: 1; gap: 6.74px; justify-content: center; padding: 8.43px 20.22px; position: relative; width: 100%; } 
+.view-hackathon .label-text { color: var(--m3-schemes-on-primary); font-family: var(--m3-label-large-font-family); font-size: var(--m3-label-large-font-size); font-style: var(--m3-label-large-font-style); font-weight: var(--m3-label-large-font-weight); letter-spacing: var(--m3-label-large-letter-spacing); line-height: var(--m3-label-large-line-height); position: relative; text-align: center; white-space: nowrap; width: fit-content; } 
+.view-hackathon .overlap-5 { background-size: 100% 100%; height: 230px; left: 908px; position: absolute; top: 180px; width: 372px; } 
+.view-hackathon .rectangle-4 { background-color: #ffffff; border-radius: 20px; height: 204px; left: 15px; position: absolute; top: 13px; width: 341px; } 
+.view-hackathon .hackathon-name { color: #000000; font-family: "Inter-Light", Helvetica; font-size: 24.6px; font-weight: 300; left: 83px; letter-spacing: 0; line-height: 26.1px; position: absolute; text-align: center; top: 84px; width: 206px; }
 
 
 
