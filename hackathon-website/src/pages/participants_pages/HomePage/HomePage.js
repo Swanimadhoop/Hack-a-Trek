@@ -1,12 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 import { IoIosAddCircle } from "react-icons/io";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { MdOutlineArrowCircleRight } from "react-icons/md";
-import Nunny from '../../../src/assets/v823-nunny-16b.jpg';
-import laika from '../../../src/assets/laika-rag-pipeline-featured.png';
-import earth from '../../../src/assets/EARTH_DAY_2019_WEB_orig.width-1024.jpg';
-import dpu from '../../../src/assets/DPU-Hackathon-featured.png';
-import nways from '../../../src/assets/N-ways-to-GPU-Programming-Bootcamp.jpg';
+import Nunny from '../../../../src/assets/v823-nunny-16b.jpg';
+import laika from '../../../../src/assets/laika-rag-pipeline-featured.png';
+import earth from '../../../../src/assets/EARTH_DAY_2019_WEB_orig.width-1024.jpg';
+import dpu from '../../../../src/assets/DPU-Hackathon-featured.png';
+import nways from '../../../../src/assets/N-ways-to-GPU-Programming-Bootcamp.jpg';
 
 
 import "./HomePage.css";
@@ -14,6 +15,12 @@ import "./HomePage.css";
 
 
 export const HomePage = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+  
+  const handleButtonClick = () => {
+    navigate("/viewhackathon"); // Navigate to /viewhackathon when clicked
+  };
+
   return (
     <div className="home-page">
       <div className="div">
@@ -32,7 +39,7 @@ export const HomePage = () => {
                 <div className="card">
                   <div className="info-2" />
                   <div className="body">
-                    <div className="text">
+                    <div className="text-home">
                       <div className="title">Join a Hackathon</div>
                       <p className="body-text-for">
                         Register for hackathons, collaborate with global teams, manage submissions, and receive
@@ -67,11 +74,11 @@ export const HomePage = () => {
           </div>
           <div className="rectangle" />
           <div className="wallpaper-bg">
-            <p className="YOUR-GATEWAY-TO-THE">
-              <span className="text-wrapper-2">YOUR GATEWAY TO THE </span>
-              <span className="span">COMPLETE</span>
-              <span className="text-wrapper-2"> HACKATHON </span>
-              <span className="span">EXPERIENCE</span>
+            <p className="main-text">
+              <span className="text-wrapper-2">Your gateway to </span>
+              <span className="span-text">the complete</span>
+              <span className="text-wrapper-2"> hackathon </span>
+              <span className="span-text">experience</span>
             </p>
             <div className="overlap-2">
               <img className="nunny" alt="Nunny" src={Nunny} />
@@ -80,7 +87,6 @@ export const HomePage = () => {
                 <div className="text-wrapper-3">upcoming events...</div>
               </div>
             </div>
-            <img className="vector" alt="Vector" src="vector-1.svg" />
             <div className="overlap-group-wrapper">
               <div className="overlap-group-2">
                 <div className="card-2">
@@ -106,7 +112,9 @@ export const HomePage = () => {
                       <div className="info-2" />
                       <div className="body">
                         <div className="text">
-                          <div className="title">Automated Submission Workflow</div>
+                          <div className="title">Automated Submission 
+                          <br />
+                          Workflow</div>
                           <p className="body-text-for">
                             Intuitive submission system allowing participants to upload projects with secure file
                             storage and deadline enforcement.
@@ -125,10 +133,8 @@ export const HomePage = () => {
                 </span>
               </p>
             </div>
-            <div className="icon-wrapper">
-              <img className="icon" alt="Icon" src="icon.svg" />
-            </div>
-            <button className="button">
+            
+            <button className="button" onClick={handleButtonClick}>
               <div className="state-layer">
                 <div className="label-text">Find</div>
               </div>
@@ -137,18 +143,7 @@ export const HomePage = () => {
           <div className="group-wrapper">
             <div className="group-4">
               <div className="overlap-group-3">
-                <div className="card-4">
-                  <div className="info-2" />
-                  <div className="body">
-                    <div className="text">
-                      <div className="title">Join a Hackathon</div>
-                      <p className="body-text-for">
-                        Register for hackathons, collaborate with global teams, manage submissions, and receive
-                        real-time updates and feedback.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                
                 <div className="card-5">
                   <div className="info-2" />
                   <div className="body">
@@ -172,18 +167,6 @@ export const HomePage = () => {
           <div className="group-5">
             <div className="group-6">
               <div className="overlap-group-4">
-                <div className="card-6">
-                  <div className="info-2" />
-                  <div className="body">
-                    <div className="text">
-                      <div className="title">Join a Hackathon</div>
-                      <p className="body-text-for">
-                        Register for hackathons, collaborate with global teams, manage submissions, and receive
-                        real-time updates and feedback.
-                      </p>
-                    </div>
-                  </div>
-                </div>
                 <div className="card-7">
                   <div className="info-2" />
                   <div className="body">
@@ -204,28 +187,14 @@ export const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="rectangle-2" />
         </div>
         <div className="overlap-5">
-          <div className="rectangle-3" />
           <div className="rectangle-4" />
           <div className="group-7">
             <div className="overlap-6">
               <div className="group-8">
                 <div className="group-9">
                   <div className="overlap-group-5">
-                    <div className="card-8">
-                      <div className="info-2" />
-                      <div className="body">
-                        <div className="text">
-                          <div className="title">Join a Hackathon</div>
-                          <p className="body-text-for">
-                            Register for hackathons, collaborate with global teams, manage submissions, and receive
-                            real-time updates and feedback.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
                     <div className="card-9">
                       <div className="info-2" />
                       <div className="body-3" />
@@ -272,18 +241,7 @@ export const HomePage = () => {
               <div className="group-11">
                 <div className="group-12">
                   <div className="overlap-group-6">
-                    <div className="card-10">
-                      <div className="info-2" />
-                      <div className="body">
-                        <div className="text">
-                          <div className="title">Join a Hackathon</div>
-                          <p className="body-text-for">
-                            Register for hackathons, collaborate with global teams, manage submissions, and receive
-                            real-time updates and feedback.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    
                     <div className="card-11">
                       <div className="info-2" />
                       <div className="body-3" />
@@ -341,18 +299,7 @@ export const HomePage = () => {
               <div className="group-14">
                 <div className="group-15">
                   <div className="overlap-group-7">
-                    <div className="card-12">
-                      <div className="info-2" />
-                      <div className="body">
-                        <div className="text">
-                          <div className="title">Join a Hackathon</div>
-                          <p className="body-text-for">
-                            Register for hackathons, collaborate with global teams, manage submissions, and receive
-                            real-time updates and feedback.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    
                     <div className="card-13">
                       <div className="info-2" />
                       <div className="body-3" />
@@ -395,18 +342,7 @@ export const HomePage = () => {
                 <div className="group-14">
                   <div className="group-15">
                     <div className="overlap-group-7">
-                      <div className="card-12">
-                        <div className="info-2" />
-                        <div className="body">
-                          <div className="text">
-                            <div className="title">Join a Hackathon</div>
-                            <p className="body-text-for">
-                              Register for hackathons, collaborate with global teams, manage submissions, and receive
-                              real-time updates and feedback.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      
                       <div className="card-13">
                         <div className="info-2" />
                         <div className="body-3" />
@@ -449,8 +385,6 @@ export const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="rectangle-5" />
-          <img className="vector-2" alt="Vector" src="vector-2.svg" />
           <button className="state-layer-wrapper">
             <div className="state-layer">
               <div className="label-text">view more-&gt;</div>
@@ -463,18 +397,7 @@ export const HomePage = () => {
                 <div className="group-19">
                   <div className="group-20">
                     <div className="overlap-group-8">
-                      <div className="card-14">
-                        <div className="info-2" />
-                        <div className="body-4">
-                          <div className="text">
-                            <div className="title">Join a Hackathon</div>
-                            <p className="body-text-for">
-                              Register for hackathons, collaborate with global teams, manage submissions, and receive
-                              real-time updates and feedback.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      
                       <div className="card-15">
                         <div className="info-2" />
                         <div className="body">
@@ -498,18 +421,7 @@ export const HomePage = () => {
                 <div className="group-19">
                   <div className="group-20">
                     <div className="overlap-group-8">
-                      <div className="card-14">
-                        <div className="info-2" />
-                        <div className="body-4">
-                          <div className="text">
-                            <div className="title">Join a Hackathon</div>
-                            <p className="body-text-for">
-                              Register for hackathons, collaborate with global teams, manage submissions, and receive
-                              real-time updates and feedback.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      
                       <div className="card-15">
                         <div className="info-2" />
                         <div className="body">
@@ -535,18 +447,7 @@ export const HomePage = () => {
                 <div className="group-24">
                   <div className="group-23">
                     <div className="overlap-group-9">
-                      <div className="card-16">
-                        <div className="info-2" />
-                        <div className="body-5">
-                          <div className="text">
-                            <div className="title">Join a Hackathon</div>
-                            <p className="body-text-for">
-                              Register for hackathons, collaborate with global teams, manage submissions, and receive
-                              real-time updates and feedback.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      
                       <div className="card-17">
                         <div className="info-2" />
                         <div className="body">
@@ -632,44 +533,22 @@ export const HomePage = () => {
               <div className="text-link-list-item">
                 <div className="list-item">Project ideas</div>
               </div>
-              <div className="text-link-list-item">
-                <div className="list-item">{""}</div>
-              </div>
-              <div className="text-link-list-item">
-                <div className="list-item">{""}</div>
-              </div>
-              <div className="text-link-list-item">
-                <div className="list-item">{""}</div>
-              </div>
-              <div className="text-link-list-item">
-                <div className="list-item">{""}</div>
-              </div>
+              
             </div>
             <div className="text-link-list">
               <div className="text-strong-wrapper">
                 <div className="text-strong">
                   <div className="text-strong-2">Resources</div>
                 </div>
+                <div className="text-strong">
+                  <div className="text-strong-2">Developers</div>
+                </div><div className="text-strong">
+                  <div className="text-strong-2">Support</div>
+                </div>
               </div>
-              <div className="text-link-list-item">
-                <div className="list-item">Blog</div>
-              </div>
-              <div className="text-link-list-item">
-                <div className="list-item">{""}</div>
-              </div>
-              <div className="text-link-list-item">
-                <div className="list-item">{""}</div>
-              </div>
-              <div className="text-link-list-item">
-                <div className="list-item">{""}</div>
-              </div>
-              <div className="text-link-list-item" />
+              
             </div>
           </footer>
-          <div className="text-wrapper-11">Developers</div>
-          <div className="text-wrapper-12">Support</div>
-          <img className="title-5" alt="Title" src="title.svg" />
-          <img className="wallpaper-bg-4" alt="Wallpaper bg" src="wallpaper-bg-3.png" />
         </div>
       </div>
     </div>

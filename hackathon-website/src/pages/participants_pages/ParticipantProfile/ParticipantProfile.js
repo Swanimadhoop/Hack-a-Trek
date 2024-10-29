@@ -44,11 +44,11 @@ export const ParticpantProfile = () => {
                         <div className="yellow-up-2" /> 
                     </div> 
                     <p className="applied-hackathons"> 
-                        <span className="text-wrapper-3"> Applied <br /> </span> 
+                        <span className="text-wrapper-3"> PREVIOUS <br /> </span> 
                         <span className="text-wrapper-2"> Hackathons <br /> <br /> </span> 
                     </p> 
                     <p className="RUNNING-hackathons"> 
-                        <span className="text-wrapper-3"> RUNNING <br /> </span> 
+                        <span className="text-wrapper-3"> APPLIED <br /> </span> 
                         <span className="text-wrapper-2"> Hackathons <br /> <br /> </span> 
                     </p> 
                     <p className="YOUR-PROJECTS"> 

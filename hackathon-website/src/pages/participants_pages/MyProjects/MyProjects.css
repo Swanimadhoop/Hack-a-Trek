@@ -1,4 +1,4 @@
-.view-more-hackathon {
+.my-projects {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
@@ -6,7 +6,7 @@
     width: 100%;
   }
   
-  .view-more-hackathon .div {
+  .my-projects .div {
     background-color: #ffffff;
     height: 832px;
     overflow: hidden;
@@ -14,7 +14,7 @@
     width: 1260px;
   }
   
-  .view-more-hackathon .top-bar {
+  .my-projects .top-bar {
     height: 155px;
     left: -26px;
     position: absolute;
@@ -22,13 +22,13 @@
     width: 1324px;
   }
   
-  .view-more-hackathon .overlap {
+  .my-projects .overlap {
     height: 155px;
     position: relative;
     width: 1322px;
   }
   
-  .view-more-hackathon .yellow {
+  .my-projects .yellow {
     height: 145px;
     left: 0;
     position: absolute;
@@ -36,7 +36,7 @@
     width: 1322px;
   }
   
-  .view-more-hackathon .overlap-group {
+  .my-projects .overlap-group {
     height: 72px;
     left: 20px;
     position: relative;
@@ -44,7 +44,7 @@
     width: 1270px;
   }
   
-  .view-more-hackathon .yellow-up {
+  .my-projects .yellow-up {
     background-color: #f6e11f;
     height: 64px;
     left: 0;
@@ -53,7 +53,7 @@
     width: 1270px;
   }
   
-  .view-more-hackathon .wallpaper-bg {
+  .my-projects .wallpaper-bg {
     height: 67px;
     left: 6px;
     mix-blend-mode: color-burn;
@@ -62,7 +62,7 @@
     width: 1260px;
   }
   
-  .view-more-hackathon .home-and-logout {
+  .my-projects .home-and-logout {
     height: 83px;
     left: 716px;
     position: absolute;
@@ -70,12 +70,12 @@
     width: 533px;
   }
   
-  .view-more-hackathon .overlap-2 {
+  .my-projects .overlap-2 {
     height: 83px;
     position: relative;
   }
   
-  .view-more-hackathon .home-abt-supp {
+  .my-projects .home-abt-supp {
     align-items: center;
     border: 0px none;
     border-color: var(--color-border-default-default);
@@ -93,7 +93,7 @@
     width: 509px;
   }
   
-  .view-more-hackathon .navigation-pill-list {
+  .my-projects .navigation-pill-list {
     align-items: center;
     display: flex;
     flex: 1;
@@ -106,22 +106,22 @@
     position: relative;
   }
   
-  .view-more-hackathon .navigation-pill-2 {
+  .my-projects .navigation-pill-2 {
     border-radius: var(--size-radius-200);
     flex: 0 0 auto;
     gap: var(--size-space-200);
     position: relative;
   }
   
-  .view-more-hackathon .navigation-pill-instance {
+  .my-projects .navigation-pill-instance {
     flex: 0 0 auto !important;
   }
   
-  .view-more-hackathon .design-component-instance-node {
+  .my-projects .design-component-instance-node {
     margin-right: -1px !important;
   }
   
-  .view-more-hackathon .log-out {
+  .my-projects .log-out {
     align-items: center;
     background-color: var(--color-background-neutral-tertiary);
     border: 0.93px solid;
@@ -139,7 +139,7 @@
     width: 64.5px;
   }
   
-  .view-more-hackathon .logout {
+  .my-projects .logout {
     color: var(--color-text-default-default);
     font-family: var(--single-line-body-base-font-family);
     font-size: var(--single-line-body-base-font-size);
@@ -156,7 +156,7 @@
     width: fit-content;
   }
   
-  .view-more-hackathon .account-circle {
+  .my-projects .account-circle {
     height: 41px !important;
     left: 45px !important;
     position: absolute !important;
@@ -164,7 +164,7 @@
     width: 41px !important;
   }
   
-  .view-more-hackathon .hack-a-trek {
+  .my-projects .hack-a-trek {
     color: transparent;
     font-family: "Atma-Bold", Helvetica;
     font-size: 26px;
@@ -177,15 +177,15 @@
     width: 194px;
   }
   
-  .view-more-hackathon .text-wrapper {
+  .my-projects .text-wrapper {
     color: #000000db;
   }
   
-  .view-more-hackathon .span {
+  .my-projects .span {
     color: #65558f;
   }
   
-  .view-more-hackathon .overlap-3 {
+  .my-projects .overlap-3 {
     background-color: #d9d9d9;
     border-radius: 20px;
     height: 230px;
@@ -195,7 +195,7 @@
     width: 372px;
   }
   
-  .view-more-hackathon .rectangle {
+  .my-projects .rectangle {
     background-color: #ffffff;
     border-radius: 20px;
     height: 204px;
@@ -205,7 +205,7 @@
     width: 341px;
   }
   
-  .view-more-hackathon .button-instance {
+  .my-projects .button-instance {
     border-radius: 51.85px !important;
     display: flex !important;
     gap: 4.15px !important;
@@ -216,16 +216,16 @@
     width: 61px !important;
   }
   
-  .view-more-hackathon .button-2 {
+  .my-projects .button-2 {
     gap: 4.15px !important;
     padding: 5.19px 12.44px !important;
   }
   
-  .view-more-hackathon .button-3 {
+  .my-projects .button-3 {
     margin-top: unset !important;
   }
   
-  .view-more-hackathon .overlap-4 {
+  .my-projects .overlap-4 {
     background-color: #d9d9d9;
     border-radius: 20px;
     height: 230px;
@@ -235,7 +235,7 @@
     width: 372px;
   }
   
-  .view-more-hackathon .rectangle-2 {
+  .my-projects .rectangle-2 {
     background-color: #ffffff;
     border-radius: 20px;
     height: 204px;
@@ -245,7 +245,7 @@
     width: 341px;
   }
   
-  .view-more-hackathon .button-4 {
+  .my-projects .button-4 {
     border-radius: 51.85px !important;
     display: flex !important;
     gap: 4.15px !important;
@@ -256,7 +256,7 @@
     width: 61px !important;
   }
   
-  .view-more-hackathon .overlap-5 {
+  .my-projects .overlap-5 {
     background-color: #d9d9d9;
     border-radius: 20px;
     height: 230px;
@@ -266,7 +266,7 @@
     width: 372px;
   }
   
-  .view-more-hackathon .button-5 {
+  .my-projects .button-5 {
     border-radius: 51.85px !important;
     display: flex !important;
     gap: 4.15px !important;
@@ -277,7 +277,7 @@
     width: 61px !important;
   }
   
-  .view-more-hackathon .overlap-6 {
+  .my-projects .overlap-6 {
     background-size: 100% 100%;
     height: 230px;
     left: 443px;
@@ -286,7 +286,7 @@
     width: 372px;
   }
   
-  .view-more-hackathon .rectangle-3 {
+  .my-projects .rectangle-3 {
     background-color: #ffffff;
     border-radius: 20px;
     height: 204px;
@@ -296,7 +296,7 @@
     width: 341px;
   }
   
-  .view-more-hackathon .button-6 {
+  .my-projects .button-6 {
     border-radius: 51.85px !important;
     display: flex !important;
     gap: 4.15px !important;
@@ -307,7 +307,7 @@
     width: 61px !important;
   }
   
-  .view-more-hackathon .overlap-7 {
+  .my-projects .overlap-7 {
     background-color: #d9d9d9;
     border-radius: 20px;
     height: 230px;
@@ -317,7 +317,7 @@
     width: 372px;
   }
   
-  .view-more-hackathon .button-7 {
+  .my-projects .button-7 {
     border-radius: 51.85px !important;
     display: flex !important;
     gap: 4.15px !important;
@@ -328,7 +328,7 @@
     width: 61px !important;
   }
   
-  .view-more-hackathon .overlap-8 {
+  .my-projects .overlap-8 {
     background-color: #d9d9d9;
     border-radius: 20px;
     height: 230px;
@@ -338,7 +338,7 @@
     width: 372px;
   }
   
-  .view-more-hackathon .button-8 {
+  .my-projects .button-8 {
     border-radius: 51.85px !important;
     display: flex !important;
     gap: 4.15px !important;
@@ -349,7 +349,7 @@
     width: 61px !important;
   }
   
-  .view-more-hackathon .text-wrapper-2 {
+  .my-projects .text-wrapper-2 {
     color: #010000;
     font-family: "Blinker-Light", Helvetica;
     font-size: 42.3px;
@@ -363,7 +363,7 @@
     width: 356px;
   }
   
-  .view-more-hackathon .group {
+  .my-projects .group {
     background-color: #d9d9d9;
     height: 122px;
     left: 29px;
@@ -372,7 +372,7 @@
     width: 372px;
   }
   
-  .view-more-hackathon .rectangle-4 {
+  .my-projects .rectangle-4 {
     background-color: #ffffff;
     border-radius: 20px 20px 0px 0px;
     height: 105px;
@@ -382,7 +382,7 @@
     width: 341px;
   }
   
-  .view-more-hackathon .rectangle-wrapper {
+  .my-projects .rectangle-wrapper {
     background-color: #d9d9d9;
     height: 122px;
     left: 444px;
@@ -391,7 +391,7 @@
     width: 372px;
   }
   
-  .view-more-hackathon .div-wrapper {
+  .my-projects .div-wrapper {
     background-color: #d9d9d9;
     height: 122px;
     left: 859px;
