@@ -32,6 +32,10 @@ import EndSubmission from './pages/organisers_pages/EndSubmission/EndSubmission'
 import OrganiserProfile from './pages/organisers_pages/OrganiserProfile/OrganiserProfile';
 
 
+import AdminLogin from './pages/admin_pages/AdminLogin/AdminLogin'
+import AdminDashboard from './pages/admin_pages/AdminDashboard/AdminDashboard';
+
+
 
 function App() {
   return (
@@ -70,6 +74,12 @@ function App() {
         <Route path="/end" element={<EndHackathon/>} />
         <Route path="/endsubmission" element={<EndSubmission/>} />
         <Route path="/publish" element={<PublishResults/>} />
+
+
+        <Route path="/alogin" element={<AdminLogin/>} />
+        <Route path="/adashboard" element={<AdminDashboard/>} />
+
+
 
 
 
