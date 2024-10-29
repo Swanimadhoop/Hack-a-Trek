@@ -3,33 +3,37 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import LandingPage from './pages/LandingPage';
 
-import PartSignup from './pages/participants_pages/PartSighup';
-import PartLogin from './pages/participants_pages/PartLogin';
-import HomePage from './pages/participants_pages/HomePage';
-import ViewmoreHackathon from './pages/participants_pages/ViewmoreHackathon';
-import ApplicationPage from './pages/participants_pages/ApplicationPage'
-import ThankyouPage from './pages/participants_pages/ThankyouPage'
-import ParticipantProfile from './pages/participants_pages/ParticipantProfile'
-import EventDay from './pages/participants_pages/EventDay';
-import AppliedHackathon from './pages/participants_pages/AppliedHackathon';
-import Projects from "./pages/participants_pages/Projects"
-import MyProjects from "./pages/participants_pages/MyProjects"
-import WinnersPage from './pages/participants_pages/WinnersPage';
+import PartSignup from './pages/participants_pages/PartSignup/PartSignup';
+import PartLogin from './pages/participants_pages/PartLogin/PartLogin';
+import HomePage from './pages/participants_pages/HomePage/HomePage';
+import ViewmoreHackathon from './pages/participants_pages/ViewmoreHackathon/ViewmoreHackathon';
+import ApplicationPage from './pages/participants_pages/ApplicationPage/ApplicationPage'
+import ThankyouPage from './pages/participants_pages/ThankyouPage/ThankyouPage'
+import ParticipantProfile from './pages/participants_pages/ParticipantProfile/ParticipantProfile'
+import EventDay from './pages/participants_pages/EventDay/EventDay';
+import ViewApplication from './pages/participants_pages/ViewApplication/ViewApplication';
+import Projects from "./pages/participants_pages/Projects/Projects"
+import MyProjects from "./pages/participants_pages/MyProjects/MyProjects"
+import WinnersPage from './pages/participants_pages/WinnersPage/WinnersPage';
 
 
-import OrgLogin from './pages/organisers_pages/OrgLogin';
-import OrgSignup from './pages/organisers_pages/OrgSignup';
-import ConductHackathon from './pages/organisers_pages/ConductHackathon';
-import DetailsFillPage from './pages/organisers_pages/DetailsFillPage'
-import HackathonPosted from './pages/organisers_pages/HackathonPosted';
-import ViewHackathon from './pages/organisers_pages/ViewHackathon';
-import StartHackathon from './pages/organisers_pages/StartHackathon'
-import Feedback from './pages/organisers_pages/Feedback';
-import Submissions from './pages/organisers_pages/Submissions';
-import PublishResults from './pages/organisers_pages/PublishResults'
-import EndHackathon from './pages/organisers_pages/EndHackathon'
-import EndSubmission from './pages/organisers_pages/EndSubmission';
-import OrganiserProfile from './pages/organisers_pages/OrganiserProfile'
+import OrgLogin from './pages/organisers_pages/OrgLogin/OrgLogin';
+import OrgSignup from './pages/organisers_pages/OrgSignup/OrgSignup';
+import ConductHackathon from './pages/organisers_pages/ConductHackathon/ConductHackathon';
+import DetailsFillPage from './pages/organisers_pages/DetailsFillPage/DetailsFillPage'
+import HackathonPosted from './pages/organisers_pages/HackathonPosted/HackathonPosted';
+import ViewHackathon from './pages/organisers_pages/ViewHackathon/ViewHackathon';
+import StartHackathon from './pages/organisers_pages/StartHackathon/StartHackathon'
+import Feedback from './pages/organisers_pages/Feedback/Feedback';
+import Submissions from './pages/organisers_pages/Submissions/Submissions';
+import PublishResults from './pages/organisers_pages/PublishResults/PublishResults'
+import EndHackathon from './pages/organisers_pages/EndHackathon/EndHackathon'
+import EndSubmission from './pages/organisers_pages/EndSubmission/EndSubmission';
+import OrganiserProfile from './pages/organisers_pages/OrganiserProfile/OrganiserProfile';
+
+
+import AdminLogin from './pages/admin_pages/AdminLogin/AdminLogin'
+import AdminDashboard from './pages/admin_pages/AdminDashboard/AdminDashboard';
 
 
 
@@ -51,7 +55,7 @@ function App() {
         <Route path="/thankyou" element={<ThankyouPage />} />
         <Route path="/pprofile" element={<ParticipantProfile />} />
         <Route path="/peventday" element={<EventDay />} />
-        <Route path="/appliedhackathon" element={<AppliedHackathon />} />
+        <Route path="/viewapplication" element={<ViewApplication />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/myprojects" element={<MyProjects />} />
 
@@ -72,17 +76,8 @@ function App() {
         <Route path="/publish" element={<PublishResults/>} />
 
 
-
-
-
-
-
-
-
-
-
-
-
+        <Route path="/alogin" element={<AdminLogin/>} />
+        <Route path="/adashboard" element={<AdminDashboard/>} />
 
 
 

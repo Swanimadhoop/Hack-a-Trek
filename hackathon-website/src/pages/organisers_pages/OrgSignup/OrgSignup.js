@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Dropdown, Button } from "react-bootstrap";
 import axios from "axios"; // Import axios for API calls
-import whatsappImage from "../../assets/WhatsApp Image 2024-09-02 at 00.37.22_c865fbb6-Photoroom.png";
-import yelloBg from "../../assets/yellow.svg.png";
+import whatsappImage from "../../../assets/WhatsApp Image 2024-09-02 at 00.37.22_c865fbb6-Photoroom.png";
+import yelloBg from "../../../assets/yellow.svg.png";
 import './OrgSignup.css'; // Import the CSS file
 import { useNavigate } from "react-router-dom"; // For navigation
 
