@@ -75,8 +75,8 @@ export const ParticipantSignup = () => {
       </header>
 
       {/* Main Content */}
-      <div className="main-content">
-        <div className="form-container">
+      <div className="main-content-psignup">
+        <div className="form-container-psignup">
           <p className="description-text">
             Join our hackathons as a participant and elevate your coding experience. Sign up to begin your journey!
           </p>

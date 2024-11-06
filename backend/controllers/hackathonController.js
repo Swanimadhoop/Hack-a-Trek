@@ -61,3 +61,33 @@ export const updateHackathonDetails = async (req, res) => {
     res.status(500).json({ message: 'Server error. Please try again later.' });
   }
 };
+
+// Function to publish hackathon results
+export const publishHackathonResults = async (req, res) => {
+  try {
+    const { _id, firstPlace, secondPlace, thirdPlace } = req.body;
+
+    // Find the hackathon by ID
+    const existingHackathon = await hackathon.findById(_id);
+
+    if (!existingHackathon) {
+      return res.status(404).json({ message: 'Hackathon not found!' });
+    }
+
+    // Create new result entry
+    const newResult = await Result.create({
+      firstPlace,
+      secondPlace,
+      thirdPlace,
+    });
+
+    // Attach the result to the hackathon
+    existingHackathon.results = newResult._id;
+    await existingHackathon.save();
+
+    res.status(200).json({ message: 'Results published successfully!' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error. Please try again later.' });
+  }
+};

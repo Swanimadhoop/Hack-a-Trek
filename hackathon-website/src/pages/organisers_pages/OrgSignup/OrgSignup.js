@@ -68,21 +68,21 @@ export const OrgSignup = () => {
     <div className="org-login-container">
       {/* Header Section */}
       <header className="org-login-header">
-        <nav className="nav-container">
+        <nav className="nav-container-signup">
           <Button variant="link" className="nav-button1">About</Button>
           <Button variant="link" className="nav-button1">Support</Button>
           <Button variant="link" className="nav-button1">Project</Button>
         </nav>
         <p>
           <span>Hack’</span>
-          <span className="purple-letter">a</span>
+          <span className="purple-letter-signup">a</span>
           <span>’Trek</span>
         </p>
       </header>
 
       {/* Main Content */}
-      <div className="main-content">
-        <div className="form-container">
+      <div className="main-content-osignup">
+        <div className="form-container-osignup">
           <p>
 
             Elevate your hackathon experience with effortless registration, streamlined submissions, and efficient judging. 
