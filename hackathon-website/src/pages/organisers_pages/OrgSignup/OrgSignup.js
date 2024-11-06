@@ -37,13 +37,26 @@ export const OrgSignup = () => {
       return;
     }
 
-    try {
-      const response = await axios.post("http://localhost:4000/api/v1/user/register", {
-        username: formData.username,
-        email: formData.email,
-        password: formData.password,
-        role: role,
-      });
+    // Use the environment variable for the base URL
+const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/user`;
+
+// Define the register endpoint path as a variable
+const REGISTER_API = `${BASE_URL}/register`;
+
+try {
+  // Send a POST request to the register API endpoint
+  const response = await axios.post(
+    REGISTER_API,
+    {
+      username: formData.username,
+      email: formData.email,
+      password: formData.password,
+      role: role,
+    }
+  );
+
+
+
 
       if (response.data.success) {
         alert("User Registered Successfully!");

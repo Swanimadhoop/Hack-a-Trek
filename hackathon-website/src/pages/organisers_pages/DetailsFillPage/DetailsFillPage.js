@@ -42,19 +42,27 @@ export const DetailsFillPage = () => {
       ...formData,
     });
 
-    try {
-      const response = await axios.put(
-        "http://localhost:4000/api/v1/hackathon/updateHackathonDetails",
-        {
-          _id, // Pass hackathon ID
-          ...formData, // Pass form data
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+    // Use the environment variable for the base URL
+const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon`;
+
+// Define the endpoint path as a variable
+const UPDATE_HACKATHON_API = `${BASE_URL}/updateHackathonDetails`;
+
+try {
+  const response = await axios.put(
+    UPDATE_HACKATHON_API,
+    {
+      _id, // Pass hackathon ID
+      ...formData, // Pass form data
+    },
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+
 
       console.log("Hackathon updated successfully:", response.data);
       alert("Hackathon updated successfully!"); // Display success message

@@ -32,8 +32,11 @@ export const ParticipantSignup = () => {
       return;
     }
 
+    const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/user`;
+    const REGISTER_API = `${BASE_URL}/register`;
+
     try {
-      const response = await axios.post("http://localhost:4000/api/v1/user/register", {
+      const response = await axios.post(REGISTER_API, {
         username: formData.username,
         email: formData.email,
         password: formData.password,

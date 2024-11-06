@@ -33,12 +33,22 @@ const ConductHackathon = () => {
 
       // Make a POST request to the backend API
 
-      
-      const response = await axios.post("http://localhost:4000/api/v1/hackathon/createhackathon", {
+      // Load environment variables (if you're using Node.js)
+      // require('dotenv').config();
+
+      // Define the base URL using the server IP from the environment variable
+      const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon`;
+
+      // Store endpoint paths as variables
+      const CREATE_HACKATHON_API = `${BASE_URL}/createhackathon`;
+
+      // Use the stored API endpoint in axios
+      const response = await axios.post(CREATE_HACKATHON_API, {
         orgName: organisationName,
         orgEmail: organisationEmail,
         hackathonName: hackathonName,
       });
+
 
       // Handle success - clear form and show success message
       const { _id } = response.data; // Assuming the response contains the created hackathon ID
