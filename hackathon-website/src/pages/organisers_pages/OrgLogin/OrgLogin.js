@@ -24,13 +24,25 @@ export const OrgLogin = () => {
   // Function to handle login form submission
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent page reload on form submit
-    try {
-      // Send a POST request to your login API endpoint
-      const response = await axios.post("http://localhost:4000/api/v1/user/login", {
-        email,
-        password,
-        role,
-      }, { withCredentials: true });
+    // Use the environment variable for the base URL
+const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/user`;
+
+// Define the login endpoint path as a variable
+const LOGIN_API = `${BASE_URL}/login`;
+
+try {
+  // Send a POST request to the login API endpoint
+  const response = await axios.post(
+    LOGIN_API,
+    {
+      email,
+      password,
+      role,
+    },
+    { withCredentials: true }
+  );
+
+
 
       if (response.data.success) {
         // If login is successful, navigate to another page (e.g., dashboard)

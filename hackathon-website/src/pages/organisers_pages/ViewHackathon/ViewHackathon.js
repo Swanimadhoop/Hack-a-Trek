@@ -43,14 +43,19 @@ export const ViewHackathon = () => {
   useEffect(() => {
     const fetchParticipants = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/v1/hackathon/${_id}/participants`);
+        const BASE_URL = process.env.REACT_APP_SERVER_IP || "http://localhost:4000";
+        const GET_PARTICIPANTS_API = `${BASE_URL}/api/v1/hackathon/${_id}/participants`;
+
+        const response = await axios.get(GET_PARTICIPANTS_API);
         setParticipants(response.data.participants || []);
       } catch (error) {
         console.error("Error fetching participants:", error);
       }
     };
 
-    if (showParticipants && _id) fetchParticipants();
+    if (showParticipants && _id) {
+      fetchParticipants();
+    }
   }, [showParticipants, _id]);
 
   // Timer logic
@@ -61,7 +66,7 @@ export const ViewHackathon = () => {
       setTimeLeft((prevTime) => {
         if (prevTime <= 1) {
           clearInterval(timer);
-          navigate(autoStart ? '/submission' : `/start/${_id}`, { state: { hackathonName } });
+          navigate(autoStart ? "/submission" : `/start/${_id}`, { state: { hackathonName } });
           return 0;
         }
         return prevTime - 1;
@@ -81,11 +86,7 @@ export const ViewHackathon = () => {
           <a href="#">About</a>
           <a href="#">Support</a>
         </div>
-        <Button
-          variant="contained"
-          className="log-out-button-start"
-          onClick={() => console.log("Logging out")}
-        >
+        <Button variant="contained" className="log-out-button-start" onClick={() => console.log("Logging out")}>
           Log Out
         </Button>
         <MdAccountCircle className="account-icon-start" />
@@ -141,11 +142,7 @@ export const ViewHackathon = () => {
 
         {/* Auto-start Toggle */}
         <div className="auto-start-toggle">
-          <Button
-            variant="contained"
-            color={autoStart ? "success" : "secondary"}
-            onClick={toggleAutoStart}
-          >
+          <Button variant="contained" color={autoStart ? "success" : "secondary"} onClick={toggleAutoStart}>
             {autoStart ? "Auto-start Enabled" : "Enable Auto-start"}
           </Button>
         </div>
@@ -162,16 +159,12 @@ export const ViewHackathon = () => {
               ))}
             </ul>
           ) : (
-            <p></p>
+            <p>No participants found</p>
           )}
           <div className="participant-button">
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={() => setShowParticipants(false)}
-          >
-            Close
-          </Button>
+            <Button variant="contained" color="secondary" onClick={() => setShowParticipants(false)}>
+              Close
+            </Button>
           </div>
         </div>
       )}

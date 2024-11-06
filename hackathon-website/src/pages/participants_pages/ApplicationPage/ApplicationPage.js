@@ -50,9 +50,22 @@ export const ApplicationPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData), // Ensure 'formData' is correctly populated before this line
         credentials: "include", // Include cookies if needed for session handling
       });
+    
+      // Check if the response status is successful (200-299)
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+    
+      // Parse JSON response if available
+      const responseData = await response.json();
+      
+      // Handle response data here, like redirecting or showing a message
+      console.log("Success:", responseData);
+    
+    
 
       const data = await response.json();
 

@@ -17,14 +17,22 @@ export const StartHackathon = () => {
   const { id: _id } = useParams();
 
   const handleStartHackathonClick = () => {
-    navigate (`/submission/${_id}`);
+    navigate(`/submission/${_id}`);
   };
 
   // Fetch hackathon details
   useEffect(() => {
     const fetchHackathonDetails = async () => {
+      // Use the environment variable for the base URL
+      const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon`;
+
+      // Define the endpoint for fetching hackathon details as a variable
+      const GET_HACKATHON_DETAILS_API = `${BASE_URL}/${_id}`;
+
       try {
-        const response = await axios.get(`http://localhost:4000/api/v1/hackathon/${_id}`);
+        // Send a GET request to the API endpoint to fetch hackathon details
+        const response = await axios.get(GET_HACKATHON_DETAILS_API);
+
         console.log("Fetched hackathon details:", response.data); // Debug log
         setHackathonDetails(response.data);
 
@@ -46,8 +54,11 @@ export const StartHackathon = () => {
   // Fetch participants when sidebar is open
   useEffect(() => {
     const fetchParticipants = async () => {
+      // Use the environment variable for the base URL
+      const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon`;
+
       try {
-        const response = await axios.get(`http://localhost:4000/api/v1/hackathon/${_id}/participants`);
+        const response = await axios.get(`${BASE_URL}/${_id}/participants`);
         setParticipants(response.data.participants || []);
       } catch (error) {
         console.error("Error fetching participants:", error);
@@ -56,7 +67,6 @@ export const StartHackathon = () => {
 
     if (showParticipants && _id) fetchParticipants();
   }, [showParticipants, _id]);
-
 
   return (
     <div className="start-hackathon-page">
@@ -94,7 +104,9 @@ export const StartHackathon = () => {
           {hackathonDetails ? (
             <>
               <div className="hackathon-date">
-                <p><strong>Date of Event:</strong> {new Date(hackathonDetails.dateOfEvent).toLocaleDateString()}</p>
+                <p>
+                  <strong>Date of Event:</strong> {new Date(hackathonDetails.dateOfEvent).toLocaleDateString()}
+                </p>
               </div>
               <div className="hackathon-mode">
                 <p><strong>Mode of Event:</strong> {hackathonDetails.modeOfEvent}</p>
@@ -117,9 +129,8 @@ export const StartHackathon = () => {
         </div>
 
         <button className="start-hackathon-button" onClick={handleStartHackathonClick}>
-            Start Hackathon
+          Start Hackathon
         </button>
-        
       </div>
 
       {/* Sidebar for Participant Names */}
@@ -133,17 +144,17 @@ export const StartHackathon = () => {
               ))}
             </ul>
           ) : (
-            <p></p>
+            <p>No participants yet.</p>
           )}
           <div className="participant-button">
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={() => setShowParticipants(false)}
-          >
-            Close
-          </Button>
-        </div>
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={() => setShowParticipants(false)}
+            >
+              Close
+            </Button>
+          </div>
         </div>
       )}
     </div>
