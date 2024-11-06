@@ -4,6 +4,7 @@ import Button from "@mui/material/Button"; // Importing Material-UI Button
 import "./DetailsFillPage.css";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const DetailsFillPage = () => {
   const location = useLocation();
@@ -56,7 +57,7 @@ export const DetailsFillPage = () => {
 
       console.log("Hackathon updated successfully:", response.data);
       alert("Hackathon updated successfully!"); // Display success message
-
+    
       // Optionally reset the form state
       setFormData({
         lastDayToApply: "",

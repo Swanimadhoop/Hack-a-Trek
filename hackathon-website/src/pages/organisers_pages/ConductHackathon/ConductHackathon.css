@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+
+.registration {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
+  font-family: 'Atma', sans-serif;
+  position: relative;
+}
+
+.heading-container {
+    display: flex;
+    flex: 1; /* Take up remaining space */
+    align-items: flex-start; /* Align items to the start */
+    justify-content: flex-start; /* Align items to the left */
+    position: relative; /* Enable absolute positioning for child elements */
+    left: -250pt;
+    top: -1px;
+  }
+  
+  .hackatrek-heading {
+    font-size: xxx-large;
+    font-weight: 700;
+    margin-bottom: 10px; /* Space between heading and text-wrapper */
+    position: relative;
+    left: -110px;
+    color: #333;
+  }
+  
+  .text-wrapper {
+    font-size: 1.2em;
+    max-width: 400px;
+    color: #333;
+    text-align: left;
+  }
+  
+
+.overlap-group {
+  display: flex;
+  justify-content: space-between; /* Aligns form on the left and heading/text on the right */
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.nav-container1 {
+  position: absolute;
+  top: 20px;
+  right: 80px; /* Position to the right with a slight margin */
+  display: flex;
+  gap: 15px;
+}
+
+.nav-button0 {
+  color: #6F42C1;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.account-circle-conduct {
+  position: absolute;
+  top: 15px;
+  right: 20px; /* Slight margin from the right edge */
+  font-size: 45px;
+  color: #6F42C1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  left: -25pt;
+  top: -320px;
+}
+
+.account-circle-conduct:hover {
+  color: #ffffff;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  top: 450px;
+  left: -300px;
+}
+
+.conduct-hackathon-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 20px;
+  position: relative;
+  
+}
+
+.conduct-hackathon-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+.conduct-hackathon-form label {
+  margin-top: 15px;
+  font-size: 1em;
+  color: #333;
+}
+
+.conduct-hackathon-form input {
+  width: 100%;
+  width: 270px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.buttons {
+  background-color: #655584;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.buttons:hover {
+  background-color: #6F42C1;
+}
+
+.success-message, .error-message {
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+.error-message {
+  color: #f44336; /* Red for error */
+}
+
+.text-wrapper, .heading-container {
+  width: 50%;
+  text-align: left;
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-left: 20px;
+}
+
+.text-wrapper {
+  font-size: 1.2em;
+  max-width: 400px;
+  margin-top: 20px;
+  color: #333;
+}
+
+.yello-bg-image-conduct {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

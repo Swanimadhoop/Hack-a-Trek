@@ -1,9 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdAccountCircle } from "react-icons/md";
 import { IoArrowUpCircleOutline } from "react-icons/io5";
 import "./EventDay.css";
 
 export const EventDay = () => {
+    const [file, setFile] = useState(null);
+    const [uploadStatus, setUploadStatus] = useState("");
+
+    // Handle file selection
+    const handleFileChange = (event) => {
+        setFile(event.target.files[0]);
+    };
+
+    // Handle file upload
+    const handleUpload = async () => {
+        if (!file) {
+            setUploadStatus("Please select a file first.");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("projectFile", file);
+
+        try {
+            setUploadStatus("Uploading...");
+            const response = await fetch("http://localhost:4000/api/v1/upload", {  // Replace with actual upload endpoint
+                method: "POST",
+                body: formData,
+                credentials: "include"
+            });
+            
+            if (response.ok) {
+                setUploadStatus("Upload successful!");
+                setFile(null);  // Clear file input after successful upload
+            } else {
+                setUploadStatus("Upload failed. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error uploading file:", error);
+            setUploadStatus("Error during upload.");
+        }
+    };
+
     return (
         <div className="organizers-page-on">
             <div className="div">
@@ -19,7 +57,6 @@ export const EventDay = () => {
                                 <div className="home-abt-supp">
                                     <div className="navigation-pill-list">
                                         <div className="navigation-pill-2" />
-                                        {/* Removed NavigationPill components */}
                                     </div>
                                 </div>
                                 <div className="log-out">
@@ -48,9 +85,22 @@ export const EventDay = () => {
                     <div className="particpntlist">
                         <div className="paetcipnt-list">
                             <div className="text-wrapper-4">Upload your project</div>
+                            <input
+                                type="file"
+                                accept=".png, .jpg, .jpeg, .pdf" // Accept only images and PDFs
+                                onChange={handleFileChange}
+                                className="file-input"
+                            />
+                            <button 
+                                onClick={handleUpload} 
+                                className="upload-button" 
+                                disabled={!file} // Disable until file is selected
+                            >
+                                <IoArrowUpCircleOutline className="arrow-up-circle" />
+                            </button>
+                            <div className="upload-status">{uploadStatus}</div>
                         </div>
                     </div>
-                    <IoArrowUpCircleOutline className="arrow-up-circle" />
                 </div>
             </div>
         </div>

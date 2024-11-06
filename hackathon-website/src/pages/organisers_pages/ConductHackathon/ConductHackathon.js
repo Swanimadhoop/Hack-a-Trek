@@ -64,19 +64,22 @@ const ConductHackathon = () => {
           <Button variant="link" className="nav-button0">Project</Button>
         </nav>
         
-        <p className="text-wrapper">
-          "Welcome to Hack' a Trek! As an organizer, you have the power to shape extraordinary experiences. 
-          Let’s launch your next hackathon and ignite innovation together!"
-        </p>
+        
 
         {/* Add an onClick handler to the account icon */}
         <MdAccountCircle className="account-circle-conduct" onClick={handleIconClick} />
 
-        <p className="hack-a-trek">
-          <span className="span">Hack’</span>
-          <span className="text-wrapper-2">a</span>
-          <span className="span">’Trek</span>
-        </p>
+        <div className="heading-container">
+          <p className="hackatrek-heading">
+            <span>Hack’</span>
+            <span className="purple-letter0">a</span>
+            <span>’Trek</span>
+          </p>
+          <p className="text-wrapper">
+            "Welcome to Hack' a Trek! As an organizer, you have the power to shape extraordinary experiences. 
+            Let’s launch your next hackathon and ignite innovation together!"
+          </p>
+        </div>
 
         <div className="form-container">
           <div className="rectangle conduct-hackathon-form">
