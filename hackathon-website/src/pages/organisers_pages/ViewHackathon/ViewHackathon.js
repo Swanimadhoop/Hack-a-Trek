@@ -1,38 +1,76 @@
 import React, { useState, useEffect } from "react";
 import { MdAccountCircle, MdDownload } from "react-icons/md";
 import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
 import "./ViewHackathon.css";
 
 export const ViewHackathon = () => {
-  const [timeLeft, setTimeLeft] = useState(200); // Set timer (e.g., 15 minutes)
-  const [autoStart, setAutoStart] = useState(false); // State to handle auto-start option
-  const navigate = useNavigate(); // Initialize navigation
+  const [timeLeft, setTimeLeft] = useState(null);
+  const [autoStart, setAutoStart] = useState(false);
+  const [hackathonDetails, setHackathonDetails] = useState(null);
+  const [showParticipants, setShowParticipants] = useState(false);
+  const [participants, setParticipants] = useState([]);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const hackathonName = location.state?.hackathonName;
+  const { id: _id } = useParams();
 
-  // Countdown logic
+  // Fetch hackathon details
   useEffect(() => {
+    const fetchHackathonDetails = async () => {
+      try {
+        const response = await axios.get(`http://localhost:4000/api/v1/hackathon/${_id}`);
+        console.log("Fetched hackathon details:", response.data); // Debug log
+        setHackathonDetails(response.data);
+
+        // Calculate timeLeft based on dateOfEvent
+        if (response.data && response.data.dateOfEvent) {
+          const eventDate = new Date(response.data.dateOfEvent).getTime();
+          const currentTime = new Date().getTime();
+          const timeDifference = Math.floor((eventDate - currentTime) / 1000);
+          setTimeLeft(timeDifference > 0 ? timeDifference : 0);
+        }
+      } catch (error) {
+        console.error("Error fetching hackathon details:", error);
+      }
+    };
+
+    if (_id) fetchHackathonDetails();
+  }, [_id]);
+
+  // Fetch participants when sidebar is open
+  useEffect(() => {
+    const fetchParticipants = async () => {
+      try {
+        const response = await axios.get(`http://localhost:4000/api/v1/hackathon/${_id}/participants`);
+        setParticipants(response.data.participants || []);
+      } catch (error) {
+        console.error("Error fetching participants:", error);
+      }
+    };
+
+    if (showParticipants && _id) fetchParticipants();
+  }, [showParticipants, _id]);
+
+  // Timer logic
+  useEffect(() => {
+    if (timeLeft === null) return;
+
     const timer = setInterval(() => {
       setTimeLeft((prevTime) => {
         if (prevTime <= 1) {
           clearInterval(timer);
-          if (autoStart) {
-            navigate("/submission"); // Redirect to /submission when auto-start is enabled
-          } else {
-            navigate("/start"); // Redirect to /start when auto-start is not enabled
-          }
+          navigate(autoStart ? '/submission' : `/start/${_id}`, { state: { hackathonName } });
+          return 0;
         }
         return prevTime - 1;
       });
-    }, 1000); // Update every second
-
-    // Cleanup timer on component unmount
+    }, 1000);
     return () => clearInterval(timer);
-  }, [navigate, autoStart]);
+  }, [timeLeft, navigate, autoStart]);
 
-  // Toggle auto-start functionality
-  const toggleAutoStart = () => {
-    setAutoStart((prevAutoStart) => !prevAutoStart);
-  };
+  const toggleAutoStart = () => setAutoStart((prev) => !prev);
 
   return (
     <div className="start-hackathon-page">
@@ -54,27 +92,39 @@ export const ViewHackathon = () => {
       </div>
 
       {/* Main Content */}
-      <div className="main-content">
+      <div className="hack-a-trek-container">
         <p className="hack-a-trek-start">
           <span>Hack’</span>
           <span className="purple-start">a</span>
           <span>’Trek</span>
         </p>
-
+      </div>
+      <div className="main-content">
         {/* Hackathon Info */}
         <div className="hackathon-info">
-          <div className="hackathon-name">
-            <p>Hackathon Name -</p>
-          </div>
-
-          <div className="details-box-start">
-            <p>Details</p>
-          </div>
+          <label className="form-label">
+            <strong>{hackathonName}</strong> {/* Hackathon name from location */}
+          </label>
+          {hackathonDetails ? (
+            <>
+              <div className="hackathon-date">
+                <p><strong>Date of Event:</strong> {new Date(hackathonDetails.dateOfEvent).toLocaleDateString()}</p>
+              </div>
+              <div className="hackathon-mode">
+                <p><strong>Mode of Event:</strong> {hackathonDetails.modeOfEvent}</p>
+              </div>
+              <div className="hackathon-description">
+                <p><strong>Description:</strong> {hackathonDetails.description}</p>
+              </div>
+            </>
+          ) : (
+            <p>Loading hackathon details...</p>
+          )}
         </div>
 
-        {/* Participant List */}
+        {/* Participant List Button */}
         <div className="participant-list-container">
-          <div className="participant-list">
+          <div className="participant-list" onClick={() => setShowParticipants(!showParticipants)}>
             <p>Participant list</p>
             <MdDownload className="download-icon" />
           </div>
@@ -82,7 +132,11 @@ export const ViewHackathon = () => {
 
         {/* Timer */}
         <div className="timer">
-          <p>Time remaining: {timeLeft} seconds</p>
+          {timeLeft !== null ? (
+            <p>Time remaining: {timeLeft} seconds</p>
+          ) : (
+            <p>Loading timer...</p>
+          )}
         </div>
 
         {/* Auto-start Toggle */}
@@ -96,6 +150,31 @@ export const ViewHackathon = () => {
           </Button>
         </div>
       </div>
+
+      {/* Sidebar for Participant Names */}
+      {showParticipants && (
+        <div className="participant-sidebar">
+          <h3>Registered Participants</h3>
+          {participants.length > 0 ? (
+            <ul>
+              {participants.map((participant, index) => (
+                <li key={index}>{participant.name}</li>
+              ))}
+            </ul>
+          ) : (
+            <p></p>
+          )}
+          <div className="participant-button">
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => setShowParticipants(false)}
+          >
+            Close
+          </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

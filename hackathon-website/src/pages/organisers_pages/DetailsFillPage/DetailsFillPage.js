@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { MdAccountCircle } from "react-icons/md";
 import Button from "@mui/material/Button"; // Importing Material-UI Button
 import "./DetailsFillPage.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom"; // Import useNavigate
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export const DetailsFillPage = () => {
   const location = useLocation();
+  const navigate = useNavigate(); // Initialize useNavigate
   const hackathonName = location.state?.hackathonName; // Get hackathon name
   const _id = location.state?._id; // Get hackathon ID
 
@@ -57,7 +58,14 @@ export const DetailsFillPage = () => {
 
       console.log("Hackathon updated successfully:", response.data);
       alert("Hackathon updated successfully!"); // Display success message
-    
+
+
+      // Navigate to the /posted page on successful update
+      // navigate("/posted"); // Redirect to the /posted page
+      navigate(`/posted/${_id}`, { state: { hackathonName } });
+      
+
+
       // Optionally reset the form state
       setFormData({
         lastDayToApply: "",
