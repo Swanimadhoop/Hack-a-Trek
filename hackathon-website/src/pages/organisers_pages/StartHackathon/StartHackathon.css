@@ -2,7 +2,7 @@
 /* General styles */
 body {
     margin: 0;
-    font-family: "Atma", system-ui;
+    
   }
   
   
@@ -108,6 +108,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    position: relative;
+    top: 20px;
   }
   
   .details-box-start {
@@ -141,4 +143,3 @@ body {
     cursor: pointer;
     color: #65558f;
   }
-  

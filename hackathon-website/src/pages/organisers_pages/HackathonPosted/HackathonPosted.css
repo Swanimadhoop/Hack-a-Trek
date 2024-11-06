@@ -122,6 +122,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  top: 430px;
   z-index: 2; /* Ensure it appears on top */
   position: relative;
   bottom: -20px; /* Adjust positioning if needed */

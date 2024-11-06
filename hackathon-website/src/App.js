@@ -65,12 +65,12 @@ function App() {
         <Route path="/osignup" element={<OrgSignup/>}/>
         <Route path="/conduct" element={<ConductHackathon/>} />
         <Route path="/detailsfill" element={<DetailsFillPage />} />
-        <Route path="/posted" element={<HackathonPosted />} />
-        <Route path="/view" element={<ViewHackathon/>} />
-        <Route path="/start" element={<StartHackathon/>} />
+        <Route path="/posted/:id" element={<HackathonPosted />} />
+        <Route path="/view/:id" element={<ViewHackathon/>} />
+        <Route path="/start/:id" element={<StartHackathon/>} />
         <Route path="/feedback" element={<Feedback/>} />
         <Route path="/oprofile" element={<OrganiserProfile/>} />
-        <Route path="/submission" element={<Submissions/>} />
+        <Route path="/submission:id" element={<Submissions/>} />
         <Route path="/end" element={<EndHackathon/>} />
         <Route path="/endsubmission" element={<EndSubmission/>} />
         <Route path="/publish" element={<PublishResults/>} />
