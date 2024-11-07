@@ -44,16 +44,19 @@ export const ApplicationPage = () => {
       hackathonIdea,
     };
 
-    try {
-      const response = await fetch("http://localhost:4000/api/v1/application/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-        credentials: "include", // Include cookies if needed for session handling
-      });
+    // Set BASE_URL to use REACT_APP_SERVER_IP if available, else default to relative path
+const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1/application` : '/api/v1/application';
+const REGISTER_API = `${BASE_URL}/register`;
 
+try {
+  const response = await fetch(REGISTER_API, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+    credentials: "include", // Include cookies if needed for session handling
+  });
       const data = await response.json();
 
       if (!response.ok) {
