@@ -6,4 +6,4 @@ const router = express.Router();
 // Route for registering hackathon application
 router.post('/register', registerApplication);
 
-export default router;
+export default router;

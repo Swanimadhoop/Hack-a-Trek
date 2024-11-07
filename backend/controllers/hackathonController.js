@@ -1,5 +1,6 @@
 import { hackathon } from '../models/hackathonSchema.js';
 import { detailsfill } from '../models/detailsfillSchema.js';
+import { Result } from '../models/resultSchema.js';
 
 // Function to create a new hackathon
 export const createHackathon = async (req, res) => {
@@ -88,6 +89,7 @@ export const publishHackathonResults = async (req, res) => {
     res.status(200).json({ message: 'Results published successfully!' });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Server error. Please try again later.' });
-  }
-};
+    
+    res.status(500).json({ message: 'Server error. Please try again later.' });
+  }
+
