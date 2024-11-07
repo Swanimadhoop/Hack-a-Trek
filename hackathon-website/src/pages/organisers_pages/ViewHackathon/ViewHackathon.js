@@ -19,8 +19,7 @@ export const ViewHackathon = () => {
   // Fetch hackathon details
   useEffect(() => {
     const fetchHackathonDetails = async () => {
-      // Set BASE_URL to use REACT_APP_SERVER_IP if available, else default to relative path
-const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon` : '/api/v1/hackathon';
+      const BASE_URL = `http://34.93.250.108/api/v1/hackathon`;
 const FETCH_HACKATHON_API = `${BASE_URL}/${_id}`;
 
 try {
@@ -48,8 +47,13 @@ try {
   useEffect(() => {
     const fetchParticipants = async () => {
       try {
-        const BASE_URL = process.env.REACT_APP_SERVER_IP || "http://localhost:4000";
-        const GET_PARTICIPANTS_API = `${BASE_URL}/api/v1/hackathon/${_id}/participants`;
+        // Set BASE_URL to the real server IP
+const BASE_URL = "http://34.93.250.108";
+
+// Construct the GET_PARTICIPANTS_API endpoint
+const GET_PARTICIPANTS_API = `${BASE_URL}/api/v1/hackathon/${_id}/participants`;
+
+
 
         const response = await axios.get(GET_PARTICIPANTS_API);
         setParticipants(response.data.participants || []);

@@ -44,7 +44,7 @@ export const ApplicationPage = () => {
       hackathonIdea,
     };
 
-    const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1/application` : '/api/v1/application';
+    const BASE_URL = `http://34.93.250.108/api/v1/application` ;
 const REGISTER_API = `${BASE_URL}/register`;
 
 try {

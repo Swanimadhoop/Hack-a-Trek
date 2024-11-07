@@ -22,8 +22,8 @@ export const EventDay = () => {
         const formData = new FormData();
         formData.append("projectFile", file);
 
-        // Set BASE_URL to use REACT_APP_SERVER_IP if available, else default to relative path
-const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1` : '/api/v1';
+        // Set BASE_URL to use  if available, else default to relative path
+const BASE_URL =   `http://34.93.250.108/api/v1`;
 const UPLOAD_API = `${BASE_URL}/upload`;
 
 try {

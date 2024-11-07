@@ -32,8 +32,8 @@ export const ParticipantSignup = () => {
       return;
     }
 
-    // Set BASE_URL to use REACT_APP_SERVER_IP if available, else default to relative path
-const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1/user` : '/api/v1/user';
+    // Set BASE_URL to use  if available, else default to relative path
+const BASE_URL =`http://34.93.250.108/api/v1/user` ;
 const REGISTER_API = `${BASE_URL}/register`;
 
 try {

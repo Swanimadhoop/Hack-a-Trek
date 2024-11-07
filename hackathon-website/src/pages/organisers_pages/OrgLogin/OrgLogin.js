@@ -25,7 +25,7 @@ export const OrgLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent page reload on form submit
     // Use the environment variable for the base URL
-const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/user`;
+const BASE_URL = `http://34.93.250.108/api/v1/user`;
 
 // Define the login endpoint path as a variable
 const LOGIN_API = `${BASE_URL}/login`;
