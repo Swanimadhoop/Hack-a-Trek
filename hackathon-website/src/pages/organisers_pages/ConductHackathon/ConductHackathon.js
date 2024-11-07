@@ -37,6 +37,7 @@ const ConductHackathon = () => {
       // require('dotenv').config();
 
       // Define the base URL using the server IP from the environment variable
+      
       const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon`;
 
       // Store endpoint paths as variables
