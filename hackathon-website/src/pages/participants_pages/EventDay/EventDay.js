@@ -22,13 +22,17 @@ export const EventDay = () => {
         const formData = new FormData();
         formData.append("projectFile", file);
 
-        try {
-            setUploadStatus("Uploading...");
-            const response = await fetch("http://localhost:4000/api/v1/upload", {  // Replace with actual upload endpoint
-                method: "POST",
-                body: formData,
-                credentials: "include"
-            });
+        // Set BASE_URL to use REACT_APP_SERVER_IP if available, else default to relative path
+const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1` : '/api/v1';
+const UPLOAD_API = `${BASE_URL}/upload`;
+
+try {
+  setUploadStatus("Uploading...");
+  const response = await fetch(UPLOAD_API, {  // Replace with actual upload endpoint
+    method: "POST",
+    body: formData,
+    credentials: "include"
+  });
             
             if (response.ok) {
                 setUploadStatus("Upload successful!");

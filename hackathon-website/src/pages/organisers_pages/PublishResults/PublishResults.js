@@ -10,21 +10,27 @@ export const PublishResults = ({ hackathonId, hackathonName }) => {
   const [thirdPlace, setThirdPlace] = useState("");
 
   const handlePublish = async () => {
-    try {
-      // Send data to the backend
-      const response = await axios.put("http://localhost:4000/api/v1/hackathon/publishResults", {
-        _id: hackathonId, // Hackathon ID passed as a prop
-        firstPlace,
-        secondPlace,
-        thirdPlace,
-      });
-      if (response.status === 200) {
-        alert("Results published successfully!");
-      }
-    } catch (error) {
-      console.error("Error publishing results:", error);
-      alert("Failed to publish results. Please try again.");
-    }
+    // Set BASE_URL to use REACT_APP_SERVER_IP if available, else default to relative path
+const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon` : '/api/v1/hackathon';
+const PUBLISH_RESULTS_API = `${BASE_URL}/publishResults`;
+
+try {
+  // Send data to the backend
+  const response = await axios.put(PUBLISH_RESULTS_API, {
+    _id: hackathonId, // Hackathon ID passed as a prop
+    firstPlace,
+    secondPlace,
+    thirdPlace,
+  });
+  
+  if (response.status === 200) {
+    alert("Results published successfully!");
+  }
+} catch (error) {
+  console.error("Error publishing results:", error);
+  alert("Failed to publish results. Please try again.");
+}
+
   };
 
   return (

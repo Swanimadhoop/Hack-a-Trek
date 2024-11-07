@@ -19,21 +19,26 @@ export const ViewHackathon = () => {
   // Fetch hackathon details
   useEffect(() => {
     const fetchHackathonDetails = async () => {
-      try {
-        const response = await axios.get(`http://localhost:4000/api/v1/hackathon/${_id}`);
-        console.log("Fetched hackathon details:", response.data); // Debug log
-        setHackathonDetails(response.data);
+      // Set BASE_URL to use REACT_APP_SERVER_IP if available, else default to relative path
+const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon` : '/api/v1/hackathon';
+const FETCH_HACKATHON_API = `${BASE_URL}/${_id}`;
 
-        // Calculate timeLeft based on dateOfEvent
-        if (response.data && response.data.dateOfEvent) {
-          const eventDate = new Date(response.data.dateOfEvent).getTime();
-          const currentTime = new Date().getTime();
-          const timeDifference = Math.floor((eventDate - currentTime) / 1000);
-          setTimeLeft(timeDifference > 0 ? timeDifference : 0);
-        }
-      } catch (error) {
-        console.error("Error fetching hackathon details:", error);
-      }
+try {
+  const response = await axios.get(FETCH_HACKATHON_API);
+  console.log("Fetched hackathon details:", response.data); // Debug log
+  setHackathonDetails(response.data);
+
+  // Calculate timeLeft based on dateOfEvent
+  if (response.data && response.data.dateOfEvent) {
+    const eventDate = new Date(response.data.dateOfEvent).getTime();
+    const currentTime = new Date().getTime();
+    const timeDifference = Math.floor((eventDate - currentTime) / 1000);
+    setTimeLeft(timeDifference > 0 ? timeDifference : 0);
+  }
+} catch (error) {
+  console.error("Error fetching hackathon details:", error);
+}
+
     };
 
     if (_id) fetchHackathonDetails();

@@ -32,13 +32,17 @@ export const ParticipantSignup = () => {
       return;
     }
 
-    try {
-      const response = await axios.post("http://localhost:4000/api/v1/user/register", {
-        username: formData.username,
-        email: formData.email,
-        password: formData.password,
-        role: role, // Ensuring role is Participant
-      });
+    // Set BASE_URL to use REACT_APP_SERVER_IP if available, else default to relative path
+const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1/user` : '/api/v1/user';
+const REGISTER_API = `${BASE_URL}/register`;
+
+try {
+  const response = await axios.post(REGISTER_API, {
+    username: formData.username,
+    email: formData.email,
+    password: formData.password,
+    role: role, // Ensuring role is Participant
+  });
 
       if (response.data.success) {
         alert("Participant Registered Successfully!");
