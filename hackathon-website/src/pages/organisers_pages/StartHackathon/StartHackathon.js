@@ -24,7 +24,7 @@ export const StartHackathon = () => {
   useEffect(() => {
     const fetchHackathonDetails = async () => {
       // Use the environment variable for the base URL
-      const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon`;
+      const BASE_URL = `http://34.93.250.108/api/v1/hackathon`;
 
       // Define the endpoint for fetching hackathon details as a variable
       const GET_HACKATHON_DETAILS_API = `${BASE_URL}/${_id}`;
@@ -55,7 +55,7 @@ export const StartHackathon = () => {
   useEffect(() => {
     const fetchParticipants = async () => {
       // Use the environment variable for the base URL
-      const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon`;
+      const BASE_URL = `http://34.93.250.108/api/v1/hackathon`;
 
       try {
         const response = await axios.get(`${BASE_URL}/${_id}/participants`);

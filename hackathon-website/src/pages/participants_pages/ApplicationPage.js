@@ -44,9 +44,13 @@ export const ApplicationPage = () => {
       hackathonIdea,
     };
 
-    // Set BASE_URL to use REACT_APP_SERVER_IP if available, else default to relative path
-const BASE_URL = process.env.REACT_APP_SERVER_IP ? `${process.env.REACT_APP_SERVER_IP}/api/v1/application` : '/api/v1/application';
+    // Set BASE_URL to use if available, else default to relative path
+// Set BASE_URL to the real server IP and API path
+const BASE_URL = "http://34.93.250.108/api/v1/application";
+
+// Construct the REGISTER_API endpoint
 const REGISTER_API = `${BASE_URL}/register`;
+
 
 try {
   const response = await fetch(REGISTER_API, {

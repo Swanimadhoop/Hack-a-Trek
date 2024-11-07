@@ -43,7 +43,7 @@ export const DetailsFillPage = () => {
     });
 
     // Use the environment variable for the base URL
-const BASE_URL = `${process.env.REACT_APP_SERVER_IP}/api/v1/hackathon`;
+const BASE_URL = `http://34.93.250.108/api/v1/hackathon`;
 
 // Define the endpoint path as a variable
 const UPDATE_HACKATHON_API = `${BASE_URL}/updateHackathonDetails`;
